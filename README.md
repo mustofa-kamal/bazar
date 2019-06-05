@@ -1,2 +1,2 @@
 # bazar
-grocery store
+grocery store based on reactjs.
