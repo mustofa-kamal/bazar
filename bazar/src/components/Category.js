@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import FormLabel from '@material-ui/core/FormLabel';
@@ -14,6 +14,11 @@ import Icon from '@material-ui/core/Icon';
 import DeleteIcon from '@material-ui/icons/Delete';
 import NavigationIcon from '@material-ui/icons/Navigation';
 import clsx from 'clsx';
+
+import { withRouter } from 'react-router-dom'
+import { Route } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom'
+
 
 
 const useStyles = makeStyles(theme => ({
@@ -54,7 +59,24 @@ function Category() {
     setSpacing(Number(value));
   }
 
+  
+  const Navigation = () =>
+<Fragment>
+    
+    <Route path='/menClothing' />
+
+
+</Fragment>
+  
+
+
+  
+
+  
+
   return (
+    <Fragment>
+    <Navigation/>
 
     <Grid container className={classes.root} spacing={2}>
    
@@ -74,14 +96,16 @@ function Category() {
 
 
           <Grid key={1} item>
-            <Fab variant="round" size="large" color="primary" aria-label="Add" className={clsx(classes.fab, classes.circle)}>
-              Men Clothing
-              <AddIcon />
-            </Fab>
+
+          
+              <Fab component={Link} to="/menClothing" variant="round" size="large" color="primary" aria-label="Add" className={clsx(classes.fab, classes.circle)}>
+                  Men Clothing
+                  <AddIcon />
+              </Fab>
           </Grid>
 
           <Grid key={2} item>
-            <Fab variant="round" size="large" color="primary" aria-label="Add" className={clsx(classes.fab, classes.circle)}>
+            <Fab  variant="round" size="large" color="primary" aria-label="Add" className={clsx(classes.fab, classes.circle)}>
               Woman Clothing
               <AddIcon />
             </Fab>
@@ -132,6 +156,7 @@ function Category() {
 
 
     </Grid>
+    </Fragment>
   );
 }
 

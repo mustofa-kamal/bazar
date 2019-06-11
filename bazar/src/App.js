@@ -5,22 +5,36 @@ import PrimarySearchAppBar from './components/PrimarySearchAppBar'
 import Explore from './components/Explore'
 import SpotLightList from './components/SpotLightList'
 import Category from './components/Category'
-import { Switch, Route, Link } from 'react-router-dom';
+import { Switch, Route, Router } from 'react-router-dom';
+import Clothing from './components/Clothing'
+import Home from './components/Home'
+
+
+
+
+
+  
+
+
+
 
 
 function App() {
   return (
-   /*  <Fragment>
-     <PrimarySearchAppBar/>
-     <MyComponent />
-    </Fragment> */
+   
 
-    <Fragment>
-       <PrimarySearchAppBar/>
-       
-       <Category/>
-       <SpotLightList/>
-    </Fragment>
+    <Fragment> 
+    
+      <Category /> 
+      <Route exact path="/" component={Home}/>  
+      <Route path="/menClothing" component={()=><Clothing />}/> 
+      
+
+      <SpotLightList /> 
+   
+   </Fragment>
+
+
 
    
   );
