@@ -9,27 +9,27 @@ import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
-import Selects from './Selects'
 
 
 const useStyles = makeStyles(theme => ({
   root: {
-    flexGrow: 1
+    width: '100%',
+    
+    backgroundColor: theme.palette.background.paper,
   },
-  paper: {
-    padding: theme.spacing(1),
-    textAlign: 'left',
-    color: theme.palette.text.secondary,
+  inline: {
+    display: 'inline',
   },
 
+  control: {
+    padding: theme.spacing(2),
+    maxWidth:"90%"
+  },
 
-  
-
-  flexcontainer: {
-    display: "flex",
-    flexDirection: 'row',
-    justifyContent: 'flex-end'
- }
+  fl: {
+    flexGrow: 1,
+    margin:"10px"
+  },
 
 
 }));
@@ -37,52 +37,13 @@ const useStyles = makeStyles(theme => ({
 function Clothing() {
   const classes = useStyles();
 
-  function FormRow() {
-    return (
-      <React.Fragment>
-        <Grid item xs={3} style={{ padding:"25px"}}>
-          <Grid container  style={{ padding:0}}>
-          <Grid  item xs={12} style={{ padding:0}}>
-           Add the menu here sdfsdfd sdf fs fsfsf sdf f fs d
-           <br/>
-           dadad
-           <br/>
-           adda
-          </Grid>
+  
 
-          
-          </Grid>
-        </Grid>
-
-
-        
-        <Grid item xs={9} style={{ padding:0}}>
-          <Paper className={classes.paper}>
-          
-          <Grid container spacing={1}>
-          <Grid  item xs={12} spacing={1}>
-          <Grid container >
+  return (
+    <Grid container >
     <Grid item xs={12}>
     <Grid container justify="center" spacing={2}>
     <Paper elevation ={1} className={classes.control}>
-
-    
-
-    
-    
-
-
-  <div className={classes.flexcontainer}><Selects/></div>
-  <div>another child</div>
-
-
-
-
-
-
-
-
-
 
     {[0, 1, 2].map(value => (
             
@@ -162,32 +123,7 @@ function Clothing() {
     </Grid>
     </Grid>
     </Grid>
-          </Grid>
-
-          
-          </Grid>
-
-          
-          </Paper>
-        </Grid>
-      </React.Fragment>
-    );
-  }
-
-  return (
-    <div className={classes.root}>
-      <Grid container spacing={1}>
-        <Grid container item xs={12} spacing={3}>
-          <FormRow />
-        </Grid>
-        
-      </Grid>
-    </div>
   );
 }
-
-
-
-
 
 export default Clothing;

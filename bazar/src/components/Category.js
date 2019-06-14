@@ -12,7 +12,6 @@ import Fab from '@material-ui/core/Fab';
 import AddIcon from '@material-ui/icons/Add';
 import Icon from '@material-ui/core/Icon';
 import DeleteIcon from '@material-ui/icons/Delete';
-import NavigationIcon from '@material-ui/icons/Navigation';
 import clsx from 'clsx';
 
 import { withRouter } from 'react-router-dom'
@@ -35,7 +34,7 @@ const useStyles = makeStyles(theme => ({
 
 
   fab: {
-    margin: theme.spacing(.5),
+    margin: theme.spacing(3,1),
   },
   extendedIcon: {
     marginRight: theme.spacing(1),
@@ -60,13 +59,6 @@ function Category() {
   }
 
   
-  const Navigation = () =>
-<Fragment>
-    
-    <Route path='/menClothing' />
-
-
-</Fragment>
   
 
 
@@ -76,7 +68,7 @@ function Category() {
 
   return (
     <Fragment>
-    <Navigation/>
+   
 
     <Grid container className={classes.root} spacing={2}>
    
@@ -105,7 +97,7 @@ function Category() {
           </Grid>
 
           <Grid key={2} item>
-            <Fab  variant="round" size="large" color="primary" aria-label="Add" className={clsx(classes.fab, classes.circle)}>
+            <Fab  component={Link} to="/womenClothing" variant="round" size="large" color="primary" aria-label="Add" className={clsx(classes.fab, classes.circle)}>
               Woman Clothing
               <AddIcon />
             </Fab>

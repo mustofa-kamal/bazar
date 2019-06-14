@@ -2,12 +2,12 @@ import React from 'react';
 import Category from './Category'
 
 
-function Home() {
+export default function Home() {
 
 
 
-return (<div></div> );
+return (<Category />  );
 }
 
-export default Home;
+ 
 
