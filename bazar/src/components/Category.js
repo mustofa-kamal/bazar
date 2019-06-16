@@ -77,15 +77,7 @@ function Category() {
       <Grid item xs={12}>
         <Grid container justify="center" spacing={spacing}>
         
-         {/*  {[0, 1, 2,4,5,6,7,8].map(value => (
-            <Grid key={value} item>
-               <Fab variant="round" size="large" color="primary" aria-label="Add" className={clsx(classes.fab,classes.circle)}>
-                  Man
-                  <AddIcon />
-                </Fab>
-
-            </Grid> */}
-
+        
 
           <Grid key={1} item>
 

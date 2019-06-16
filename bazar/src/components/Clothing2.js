@@ -40,16 +40,20 @@ function Clothing() {
   function FormRow() {
     return (
       <React.Fragment>
-        <Grid item xs={3} >
-        <Grid container justify="flex-start"  style={{ padding: "5px"  }}>
+        <Grid item xs={3} style={{ padding: "25px" }}>
+          <Grid container style={{ padding: 0 }}>
+            <Grid item xs={12} style={{ padding: 0 }}>
 
-              s s ss s ss sss s
-          
+              Add the menu here sdfsdfd sdf fs fsfsf sdf f fs d
+           <br />
+              dadad
+           <br />
+              adda
 
           </Grid>
 
 
-         
+          </Grid>
         </Grid>
 
 
@@ -59,14 +63,8 @@ function Clothing() {
 
             <Grid container spacing={1}>
               <Grid item xs={12} spacing={1}>
-
-
-              
-                
-                  
-
-
-
+                <Grid container >
+                  <Grid item xs={12}>
                     <Grid
                       container
                       direction="row"
@@ -168,7 +166,10 @@ function Clothing() {
                     </Grid>
                   </Grid>
                 </Grid>
-             
+              </Grid>
+
+
+            </Grid>
 
 
           </Paper>

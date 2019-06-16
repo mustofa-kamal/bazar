@@ -7,17 +7,18 @@ import Icon from '@material-ui/core/Icon';
 import { makeStyles } from '@material-ui/core/styles';
 import Fab from '@material-ui/core/Fab';
 import NavigationIcon from '@material-ui/icons/Navigation';
-import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
-
 
 
 
 
 
 const useStyles = makeStyles(theme => ({
-  button: {
+  fab: {
     margin: theme.spacing(1),
-  }
+  },
+  extendedIcon: {
+    marginRight: theme.spacing(1),
+  },
 }));
 
 
@@ -54,15 +55,12 @@ export default function FadeMenu() {
   return (
     <div>
       
-      
 
 
-      <Button variant="contained" size="small" color="primary" className={classes.button} onMouseOver={handleClick}>
+      <Fab variant="extended" size="small" color="primary"  aria-label="Delete" className={classes.fab} onMouseOver={handleClick}>
+        <NavigationIcon className={classes.extendedIcon} />
         {options[selectedIndex]}
-        <ArrowDropDownIcon />
-      </Button>
-
-
+      </Fab>
 
 
       <Menu
