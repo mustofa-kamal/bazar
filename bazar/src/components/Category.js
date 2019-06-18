@@ -70,7 +70,7 @@ function Category() {
     <Fragment>
    
 
-    <Grid container className={classes.root} spacing={2}>
+    <Grid container className={classes.root} spacing={2} >
    
         
 

@@ -13,6 +13,7 @@ import Breadcrumbs from "@material-ui/core/Breadcrumbs";
 import Typography from "@material-ui/core/Typography";
 import { Link as RouterLink, BrowserRouter } from "react-router-dom";
 import { Route, BrowserRouter as Router, MemoryRouter } from "react-router-dom";
+import Footer from './components/Footer';
 
 
 
@@ -26,7 +27,10 @@ function Layout(props) {
         <br/>
         {props.children}
         <br/>
-      <SpotLightList />
+{/*       <SpotLightList />
+ */}      
+      
+      <Footer/>
     </Fragment>
   );
 }
