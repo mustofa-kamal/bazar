@@ -8,6 +8,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import Fab from '@material-ui/core/Fab';
 import NavigationIcon from '@material-ui/icons/Navigation';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
+import Grid from '@material-ui/core/Grid';
+
 
 
 
@@ -16,7 +18,7 @@ import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 
 const useStyles = makeStyles(theme => ({
   button: {
-    margin: theme.spacing(1),
+    margin: theme.spacing(1,1,1,0),
   }
 }));
 
@@ -53,15 +55,25 @@ export default function FadeMenu() {
 
   return (
     <div>
-      
-      
 
-
-      <Button variant="contained" size="small" color="primary" className={classes.button} onMouseOver={handleClick}>
+    <Grid container direction="row" alignItems="center">
+      <Grid item>
+       sort:
+      </Grid>
+      <Grid item>
+      <Button variant="outlined" size="small" className={classes.button} onMouseOver={handleClick}>
         {options[selectedIndex]}
         <ArrowDropDownIcon />
       </Button>
+      </Grid>
+    </Grid>
 
+      
+     {/*  <Button variant="outlined" size="small" className={classes.button} onMouseOver={handleClick}>
+        {options[selectedIndex]}
+        <ArrowDropDownIcon />
+      </Button>
+ */}
 
 
 

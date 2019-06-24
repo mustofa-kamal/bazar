@@ -8,12 +8,15 @@ import Category from './components/Category'
 import Clothing from './components/Clothing'
 import Home from './components/Home'
 
+
+
 import Link from "@material-ui/core/Link";
 import Breadcrumbs from "@material-ui/core/Breadcrumbs";
 import Typography from "@material-ui/core/Typography";
 import { Link as RouterLink, BrowserRouter } from "react-router-dom";
 import { Route, BrowserRouter as Router, MemoryRouter } from "react-router-dom";
 import Footer from './components/Footer';
+
 
 
 
@@ -27,8 +30,7 @@ function Layout(props) {
         <br/>
         {props.children}
         <br/>
-{/*       <SpotLightList />
- */}      
+      
       
       <Footer/>
     </Fragment>

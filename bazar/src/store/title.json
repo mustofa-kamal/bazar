@@ -24,6 +24,18 @@
             "img": "http://localhost:3000/morning.jpg",
             "title": "morning",
             "author": "zakaria"
+          },
+          {
+            "img": "http://localhost:3000/shirt1.jpg",
+            "title": "morning",
+            "author": "zakaria"
+          },
+          {
+            "img": "http://localhost:3000/shirt2.jpg",
+            "title": "morning",
+            "author": "zakaria"
           }
+
+
     ]
 }

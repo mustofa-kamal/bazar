@@ -25,10 +25,10 @@ function FooterList(props) {
 
 
       <List component="nav" className={classes.horizontal}>
-        <ListItem component="a" href="#simple-list">
+        <ListItem component="a" href="https://www.youtube.com/channel/UCz00cpzI3DnTHL6Ko_9xa0g">
           <ListItemText
             classes={{ primary: classes.listItemText }}
-            primary="Trash sfsdfsd fsdfasdasd asd  asd as dadasd asd asda das dad aad ad as das d asd asd as das das d as d sdasd sdfsdf " />
+            primary="YouTube Channel" />
         </ListItem>
         <ListItem component="a" href="#simple-list">
           <ListItemText
