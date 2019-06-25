@@ -1,9 +1,10 @@
 import React, { Fragment,Component } from 'react';
 import logo from './logo.svg';
-import './App.css';
+
+/* import './App.css';
+ */
 import PrimarySearchAppBar from './components/PrimarySearchAppBar'
 import Explore from './components/Explore'
-import SpotLightList from './components/SpotLightList'
 import Category from './components/Category'
 import Clothing from './components/Clothing'
 import Home from './components/Home'
@@ -78,31 +79,13 @@ function SimpleBreadcrumbs() {
 
 function App() {
   return (
-   
-
     <BrowserRouter>
-    
       <Layout>
-     
         <Route exact path="/" component={Home}/>
-          
-
         <Route path="/menClothing"   component={()=><Clothing gender="men" />}/>
         <Route path="/womenClothing" component={()=><Clothing gender="women" />}/>  
-
       </Layout>
-
-    
-      
-
-     
-   
    </BrowserRouter>
-
-
-
-   
   );
 }
-
 export default App;

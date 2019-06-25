@@ -1,0 +1,41 @@
+{
+    "recentlyViewed":[
+        {
+            "img": "http://localhost:3000/burgers.jpg",
+            "title": "author",
+            "author": "Sohel"
+          },
+          {
+            "img": "http://localhost:3000/camera.jpg",
+            "title": "camera",
+            "author": "Nipa"
+          },
+          {
+            "img": "http://localhost:3000/hats.jpg",
+            "title": "hats",
+            "author": "Mortoza"
+          },
+          {
+            "img": "http://localhost:3000/honey.jpg",
+            "title": "honey",
+            "author": "Isa"
+          },
+          {
+            "img": "http://localhost:3000/morning.jpg",
+            "title": "morning",
+            "author": "zakaria"
+          },
+          {
+            "img": "http://localhost:3000/shirt1.jpg",
+            "title": "morning",
+            "author": "zakaria"
+          },
+          {
+            "img": "http://localhost:3000/shirt2.jpg",
+            "title": "morning",
+            "author": "zakaria"
+          }
+
+
+    ]
+}

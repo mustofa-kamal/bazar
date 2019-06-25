@@ -2,11 +2,7 @@ import React from 'react';
 import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
-import Fade from '@material-ui/core/Fade';
-import Icon from '@material-ui/core/Icon';
 import { makeStyles } from '@material-ui/core/styles';
-import Fab from '@material-ui/core/Fab';
-import NavigationIcon from '@material-ui/icons/Navigation';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import Grid from '@material-ui/core/Grid';
 
@@ -69,12 +65,7 @@ export default function FadeMenu() {
     </Grid>
 
       
-     {/*  <Button variant="outlined" size="small" className={classes.button} onMouseOver={handleClick}>
-        {options[selectedIndex]}
-        <ArrowDropDownIcon />
-      </Button>
- */}
-
+  
 
 
       <Menu

@@ -1,4 +1,4 @@
-import React, {Fragment, useEffect} from 'react';
+import React, { Fragment, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -10,14 +10,15 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Selects from './Selects'
-import SpotLightList from './SpotLightList';
+import CarouselList from './CarouselList';
 import Footer from './Footer'
+import  ImgMediaCard from './ImgMediaCard'
 
 
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
-   
+
   },
   paper: {
     width: "95%",
@@ -38,14 +39,14 @@ const useStyles = makeStyles(theme => ({
 
 
 
-function Clothing(){
-return(
-  <Fragment>
-  
-  <Clothing1/>
- 
-  </Fragment>
-)
+function Clothing() {
+  return (
+    <Fragment>
+
+      <Clothing1 />
+
+    </Fragment>
+  )
 }
 
 
@@ -53,166 +54,82 @@ return(
 
 
 function Clothing1() {
-  useEffect( () => {
+  useEffect(() => {
     document.body.style.backgroundColor = "#eeeeee";
     console.log("mount")
-  }, [] );
-
-
-  
-
-  
-  
+  }, []);
 
   const classes = useStyles();
 
-  
-
-
-
-  
   return (
     <Fragment>
-  <Grid container className={classes.root} spacing={2}>
-      <Grid item xs={12}>
-        <Grid container justify="center" spacing={2}>
-          
+      <Grid container className={classes.root} spacing={2}>
+        <Grid item xs={12}>
+          <Grid container justify="center" spacing={2}>
+
             <Grid key={1} item xs={3}>
-              <div>wrwrwrw</div>
             </Grid>
 
             <Grid key={2} item xs={9}>
               <Paper className={classes.paper} >
-              <Grid
-                      container
-                      direction="row"
-                      justify="flex-end"
-                      alignItems="center"
-                    ><Selects /></Grid>
-                     
-                     
-
-{[0, 1, 2].map(value => (
-
-
-  <List className={classes.root}>
-    <ListItem key={value} alignItems="flex-start">
-      <ListItemAvatar>
-        <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
-      </ListItemAvatar>
-      <ListItemText
-        primary="Brunch this weekend?"
-        secondary={
-          <React.Fragment>
-            <Typography
-              component="span"
-              variant="body2"
-              className={classes.inline}
-              color="textPrimary"
-            >
-              Ali Connors
-</Typography>
-            {" — I'll be in your neighborhood doing errands this…"}
-          </React.Fragment>
-        }
-      />
-    </ListItem>
-    <Divider variant="inset" component="li" />
-    <ListItem alignItems="flex-start">
-      <ListItemAvatar>
-        <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-      </ListItemAvatar>
-      <ListItemText
-        primary="Summer BBQ"
-        secondary={
-          <React.Fragment>
-            <Typography
-              component="span"
-              variant="body2"
-              className={classes.inline}
-              color="textPrimary"
-            >
-              to Scott, Alex, Jennifer
-</Typography>
-            {" — Wish I could come, but I'm out of town this…"}
-          </React.Fragment>
-        }
-      />
-    </ListItem>
-    <Divider variant="inset" component="li" />
-    <ListItem alignItems="flex-start">
-      <ListItemAvatar>
-        <Avatar alt="Remy Sharp" src="/static/images/avatar/3.jpg" />
-      </ListItemAvatar>
-      <ListItemText
-        primary="Oui Oui"
-        secondary={
-          <React.Fragment>
-            <Typography
-              component="span"
-              variant="body2"
-              className={classes.inline}
-              color="textPrimary"
-            >
-              Sandra Adams
-</Typography>
-            {' — Do you have Paris recommendations? DddaD adaNDd aD ad ad d d ad ad a da Da da D ad aD A da Da d Da da d d aDAD Have you ever…'}
-          </React.Fragment>
-        }
-      />
-    </ListItem>
-  </List>
-))}
+                <Grid
+                  container
+                  direction="row"
+                  justify="flex-end"
+                  alignItems="center"
+                ><Selects />
+                </Grid>
 
 
 
+                {[0, 1, 2,3,4,5,6,7,8,9,10].map(value => (
 
-                     
-                     
-                     
-                     </Paper>
+
+                 
+                <ImgMediaCard />
+                
+                
+                
+                ))}
+
+              </Paper>
             </Grid>
-          
+
+          </Grid>
         </Grid>
       </Grid>
-     </Grid>
 
+      <Grid container className={classes.root} spacing={2}>
+        <Grid item xs={12}>
+          <Grid container justify="center" spacing={2}>
 
-
-
-
-
-        
-
-     <Grid container className={classes.root} spacing={2}>
-      <Grid item xs={12}>
-        <Grid container justify="center" spacing={2}>
-          
             <Grid key={1} item xs={3}>
               <div></div>
             </Grid>
 
             <Grid key={2} item xs={9}>
               <Paper className={classes.paper} >
-              
-                     Recently Viewed Items<br/> <br/> 
+                <div className='alice-carousel'>
+                  <button>Recently Viewed Items</button>
+                </div>
 
-                     <SpotLightList/>
-             
-
-                    </Paper>
-                    </Grid>
-                    </Grid>
-                    </Grid></Grid>
+                <CarouselList />
 
 
-                
+              </Paper>
+            </Grid>
+          </Grid>
+        </Grid>
+      </Grid>
 
-                    
-                    
-     
 
-     </Fragment>
+
+
+
+
+
+
+    </Fragment>
   );
 }
 

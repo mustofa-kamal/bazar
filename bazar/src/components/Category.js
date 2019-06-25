@@ -1,21 +1,15 @@
 import React, { Fragment } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import FormLabel from '@material-ui/core/FormLabel';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import RadioGroup from '@material-ui/core/RadioGroup';
-import Radio from '@material-ui/core/Radio';
-import Paper from '@material-ui/core/Paper';
+
 
 
 import Fab from '@material-ui/core/Fab';
 import AddIcon from '@material-ui/icons/Add';
-import Icon from '@material-ui/core/Icon';
-import DeleteIcon from '@material-ui/icons/Delete';
+
 import clsx from 'clsx';
 
-import { withRouter } from 'react-router-dom'
-import { Route } from 'react-router-dom';
+
 import { Link, NavLink } from 'react-router-dom'
 
 
@@ -58,30 +52,14 @@ function Category() {
     setSpacing(Number(value));
   }
 
-  
-  
-
-
-  
-
-  
-
   return (
     <Fragment>
    
-
     <Grid container className={classes.root} spacing={2} >
    
-        
-
       <Grid item xs={12}>
         <Grid container justify="center" spacing={spacing}>
-        
-        
-
           <Grid key={1} item>
-
-          
               <Fab component={Link} to="/menClothing" variant="round" size="large" color="primary" aria-label="Add" className={clsx(classes.fab, classes.circle)}>
                   Men Clothing
                   <AddIcon />
@@ -101,7 +79,6 @@ function Category() {
               <AddIcon />
             </Fab>
           </Grid>
-
 
           <Grid key={2} item>
             <Fab variant="round" size="large" color="primary" aria-label="Add" className={clsx(classes.fab, classes.circle)}>
@@ -123,22 +100,8 @@ function Category() {
               <AddIcon />
             </Fab>
           </Grid>
-
-
-
-
-
-
-
-
-        
         </Grid>
       </Grid>
-      
-      
-      
-
-
     </Grid>
     </Fragment>
   );
