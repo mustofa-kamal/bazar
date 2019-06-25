@@ -15,6 +15,9 @@ import StarBorderIcon from '@material-ui/icons/StarBorder';
 
 import { Link as RouterLink, BrowserRouter } from "react-router-dom";
 
+import Button from '@material-ui/core/Button';
+
+
 
 
 
@@ -164,8 +167,18 @@ export default function CarouselList() {
       
           
       />
-      <button onClick={slidePrevPage}>Prev Page</button>
-      <button onClick={slideNextPage}>Next Page</button>
+     
+      <Button onClick={slidePrevPage} size="small" color="primary">
+      Prev Page
+        </Button>
+
+        <Button onClick={slideNextPage} size="small" color="primary">
+      Next Page
+        </Button>
+
+
+      
+      
     </div>
   )
 }

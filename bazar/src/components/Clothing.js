@@ -13,6 +13,8 @@ import Selects from './Selects'
 import CarouselList from './CarouselList';
 import Footer from './Footer'
 import  ImgMediaCard from './ImgMediaCard'
+import Box from '@material-ui/core/Box';
+
 
 
 const useStyles = makeStyles(theme => ({
@@ -109,9 +111,17 @@ function Clothing1() {
 
             <Grid key={2} item xs={9}>
               <Paper className={classes.paper} >
-                <div className='alice-carousel'>
-                  <button>Recently Viewed Items</button>
-                </div>
+                 
+
+
+                
+      <Box p={1} bgcolor="background.paper">
+      <Typography color="primary"  variant="subtitle2" component="h2">
+                        Recently Viewed Items
+                  </Typography>
+      </Box>
+
+            
 
                 <CarouselList />
 
