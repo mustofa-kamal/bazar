@@ -100,6 +100,7 @@ export default function CarouselList() {
   const initGalleryItems = (result) => {
     return (
       result.map((item, i) =>
+      
         <GalleryItem key={i} img={item.img} title={item.title} url='https://material-ui.com/components/grid-list/'/>
       )
     )

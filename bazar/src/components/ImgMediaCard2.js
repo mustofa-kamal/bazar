@@ -41,13 +41,13 @@ const useStyles = makeStyles({
 
 const ImgMediaCard = () => {
   const [hasError, setErrors] = useState(false);
-  const [items,   ] = useState([]);
+  const [planets, setPlanets] = useState([]);
 
   async function fetchData() {
     const res = await fetch("http://localhost:3001/title");
     res
       .json()
-      .then(res => setItems(res))
+      .then(res => setPlanets(res))
       .catch(err => setErrors(err));
   }
 
@@ -61,7 +61,7 @@ const ImgMediaCard = () => {
 
   return (
 
-    items.map((item, key) =>
+    planets.map((item, key) =>
     <div>{item.img}</div>
     )
   

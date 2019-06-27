@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { Fragment, useEffect, useState} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -14,6 +14,11 @@ import CarouselList from './CarouselList';
 import Footer from './Footer'
 import  ImgMediaCard from './ImgMediaCard'
 import Box from '@material-ui/core/Box';
+
+
+import FlatPagination from './FlatPagination'
+
+
 
 
 
@@ -52,6 +57,19 @@ function Clothing() {
 }
 
 
+const sizes = [
+  {value:0, size: 'XS'},
+  {value:1, size: 'S'},
+  {value:2, size: 'M'},
+  {value:3, size: 'L'},
+  {value:4, size: 'XL'},
+  {value:5, size: 'XXL'},
+  {value:6, size: 'XXXL'},
+  {value:7, size: 'XXXXL'}
+];
+
+
+
 
 
 
@@ -60,6 +78,14 @@ function Clothing1() {
     document.body.style.backgroundColor = "#eeeeee";
     console.log("mount")
   }, []);
+
+  const [offset, setOffset ] = useState(0);
+
+  const callback = (offset) => {
+      setOffset(offset);
+  }
+
+
 
   const classes = useStyles();
 
@@ -79,21 +105,27 @@ function Clothing1() {
                   direction="row"
                   justify="flex-end"
                   alignItems="center"
-                ><Selects />
+                ><Selects/>
                 </Grid>
 
 
 
-                {[0, 1, 2,3,4,5,6,7,8,9,10].map(value => (
+               
 
 
                  
-                <ImgMediaCard />
-                
-                
-                
-                ))}
+                <ImgMediaCard offset={offset}/>
 
+               
+                
+                
+                
+                
+
+              </Paper>
+              <Paper className={classes.paper} style={{display:'flex',justifyContent: 'center'}}>
+              <FlatPagination parentCallback={callback}/>
+              
               </Paper>
             </Grid>
 
