@@ -57,22 +57,6 @@ function Clothing() {
 }
 
 
-const sizes = [
-  {value:0, size: 'XS'},
-  {value:1, size: 'S'},
-  {value:2, size: 'M'},
-  {value:3, size: 'L'},
-  {value:4, size: 'XL'},
-  {value:5, size: 'XXL'},
-  {value:6, size: 'XXXL'},
-  {value:7, size: 'XXXXL'}
-];
-
-
-
-
-
-
 function Clothing1() {
   useEffect(() => {
     document.body.style.backgroundColor = "#eeeeee";
@@ -81,10 +65,18 @@ function Clothing1() {
 
   const [offset, setOffset ] = useState(0);
 
+  const [selectedSortItem, setSelectedSortItem ] = useState("size");
+
+
+  
+
   const callback = (offset) => {
       setOffset(offset);
   }
 
+  const callbackSelect= (selectedSortItem) => {
+    setSelectedSortItem(selectedSortItem);
+}
 
 
   const classes = useStyles();
@@ -105,7 +97,7 @@ function Clothing1() {
                   direction="row"
                   justify="flex-end"
                   alignItems="center"
-                ><Selects/>
+                ><Selects parentCallback={callbackSelect}/>
                 </Grid>
 
 
@@ -114,7 +106,7 @@ function Clothing1() {
 
 
                  
-                <ImgMediaCard offset={offset}/>
+                <ImgMediaCard offset={offset} selectedSortItem={selectedSortItem}/>
 
                
                 

@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
 
 
 
-export default function FadeMenu() {
+export default function FadeMenu({parentCallback}) {
   const classes = useStyles();
 
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -28,15 +28,16 @@ export default function FadeMenu() {
   const [selectedIndex, setSelectedIndex] = React.useState(1);
 
   const options = [
-    'by price',
-    'by size',
-    'by material',
-    'by like',
+    'price',
+    'size',
+    'material',
+    'brand'
   ];
 
   function handleMenuItemClick(event, index) {
     setSelectedIndex(index);
     console.log(options[index])
+    parentCallback(options[index]);
     setAnchorEl(null);
   }
 

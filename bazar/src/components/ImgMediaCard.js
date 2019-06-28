@@ -127,7 +127,8 @@ const GalleryItem = (props) => {
 const ImgMediaCard = (props) => {
   const [hasError, setErrors] = useState(false);
   const [items, setItems  ] = useState([]);
-  const offset = props.offset
+  const offset = props.offset;
+  const selectedSortItem = props.selectedSortItem;
 
   const limit = 10
 
@@ -140,7 +141,7 @@ const ImgMediaCard = (props) => {
 
 
   async function fetchData() {
-    const res = await fetch("http://localhost:3001/title?_page="+page+"&_limit="+limit);
+    let res = await fetch("http://localhost:3001/title?_page="+page+"&_limit="+limit+"&_sort="+selectedSortItem);
     res
       .json()
       .then(res => setItems(res))
@@ -149,7 +150,7 @@ const ImgMediaCard = (props) => {
 
   useEffect(() => {
     fetchData()
-  }, [offset])
+  }, [offset,selectedSortItem])
 
   return (
 
