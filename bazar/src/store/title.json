@@ -1,4 +1,6 @@
 {
+  
+
     "title":[
         {
             "img": "http://localhost:3000/burgers.jpg",
@@ -217,6 +219,28 @@
 
           }
 
+          
 
-    ]
+
+    ],
+    "filters":
+    {
+      
+      
+        "size":["XS","S","L","XL","XXL","XXXL","XXXXL"],
+
+
+      
+      
+
+      
+        "material":["cotton","silk"]
+
+
+      
+      
+
+   
+   
+  }
 }

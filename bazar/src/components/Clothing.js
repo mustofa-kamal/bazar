@@ -17,6 +17,7 @@ import Box from '@material-ui/core/Box';
 
 
 import FlatPagination from './FlatPagination'
+import FilterPanel from './FilterPanel';
 
 
 
@@ -46,18 +47,9 @@ const useStyles = makeStyles(theme => ({
 
 
 
+
+
 function Clothing() {
-  return (
-    <Fragment>
-
-      <Clothing1 />
-
-    </Fragment>
-  )
-}
-
-
-function Clothing1() {
   useEffect(() => {
     document.body.style.backgroundColor = "#eeeeee";
     console.log("mount")
@@ -68,6 +60,11 @@ function Clothing1() {
   const [selectedSortItem, setSelectedSortItem ] = useState("size");
 
 
+  const [checkedFilterItems, setCheckedFilterItems ] = useState([]);
+
+
+
+
   
 
   const callback = (offset) => {
@@ -76,7 +73,11 @@ function Clothing1() {
 
   const callbackSelect= (selectedSortItem) => {
     setSelectedSortItem(selectedSortItem);
-}
+  }
+
+  const callbackFilter= (checkedFilterItems) => {
+    setCheckedFilterItems(checkedFilterItems);
+  }
 
 
   const classes = useStyles();
@@ -87,7 +88,11 @@ function Clothing1() {
         <Grid item xs={12}>
           <Grid container justify="center" spacing={2}>
 
+          
+
             <Grid key={1} item xs={3}>
+
+            <FilterPanel parentCallback={callbackFilter}/>  
             </Grid>
 
             <Grid key={2} item xs={9}>
@@ -100,23 +105,12 @@ function Clothing1() {
                 ><Selects parentCallback={callbackSelect}/>
                 </Grid>
 
-
-
-               
-
-
-                 
                 <ImgMediaCard offset={offset} selectedSortItem={selectedSortItem}/>
 
-               
-                
-                
-                
-                
-
               </Paper>
+
               <Paper className={classes.paper} style={{display:'flex',justifyContent: 'center'}}>
-              <FlatPagination parentCallback={callback}/>
+                <FlatPagination parentCallback={callback}/>
               
               </Paper>
             </Grid>
@@ -139,15 +133,15 @@ function Clothing1() {
 
 
                 
-      <Box p={1} bgcolor="background.paper">
-      <Typography color="primary"  variant="subtitle2" component="h2">
-                        Recently Viewed Items
-                  </Typography>
-      </Box>
+            <Box p={1} bgcolor="background.paper">
+                <Typography color="primary"  variant="subtitle2" component="h2">
+                    Recently Viewed Items
+                </Typography>
+            </Box>
 
-            
 
-                <CarouselList />
+
+          <CarouselList />
 
 
               </Paper>
@@ -155,7 +149,6 @@ function Clothing1() {
           </Grid>
         </Grid>
       </Grid>
-
 
 
 

@@ -47,7 +47,7 @@ const GalleryItem = (props) => {
 
 
         <Fragment>
-            <Card className={classes.card} square={true} >
+            <Card className={classes.card}>
               <CardActionArea style={{display:"flex"}}>
                 <CardMedia
                   component="img"

@@ -17,6 +17,7 @@ import Typography from "@material-ui/core/Typography";
 import { Link as RouterLink, BrowserRouter } from "react-router-dom";
 import { Route, BrowserRouter as Router, MemoryRouter } from "react-router-dom";
 import Footer from './components/Footer';
+import RecentlyViewed from './components/RecentlyViewed'
 
 
 
@@ -28,12 +29,17 @@ function Layout(props) {
   return (
     <Fragment>
       <PrimarySearchAppBar/> 
+      <div style={{paddingLeft:20}}>
         <SimpleBreadcrumbs/>
         <br/>
         {props.children}
         <br/>
-      
-      
+        
+       
+      </div>
+        
+
+
       <Footer/>
     </Fragment>
   );
