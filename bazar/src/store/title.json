@@ -8,7 +8,7 @@
             "author": "Sohel",
             "price": "100.00",
             "shipping":"free",
-            "brand":"Lauren Ralph Lauren",
+            "brand":"RL",
             "size":"L"
           },
           {
@@ -48,7 +48,7 @@
             "author": "zakaria",
             "price":"323.00",
             "shipping":"free",
-            "brand":"under armour",
+            "brand":"UA",
             "size":"S"
           },
           {
@@ -57,7 +57,7 @@
             "author": "zakaria",
             "price":"212.00",
             "shipping":"free",
-            "brand":"under armour",
+            "brand":"UA",
             "size":"L"
 
           },
@@ -67,7 +67,7 @@
             "author": "zakaria",
             "price":"211.00",
             "shipping":"free",
-            "brand":"under armour",
+            "brand":"UA",
             "size":"M"
 
           },
@@ -83,7 +83,7 @@
             "author": "Sohel",
             "price": "100.00",
             "shipping":"free",
-            "brand":"Lauren Ralph Lauren",
+            "brand":"RL",
             "size":"S"
           },
           {
@@ -124,7 +124,7 @@
             "author": "zakaria",
             "price":"323.00",
             "shipping":"free",
-            "brand":"under armour",
+            "brand":"UA",
             "size":"L"
           },
           {
@@ -133,7 +133,7 @@
             "author": "zakaria",
             "price":"212.00",
             "shipping":"free",
-            "brand":"under armour",
+            "brand":"UA",
             "size":"XL"
 
           },
@@ -143,7 +143,7 @@
             "author": "zakaria",
             "price":"211.00",
             "shipping":"free",
-            "brand":"under armour",
+            "brand":"UA",
             "size":"XXL"
 
           },
@@ -155,7 +155,7 @@
             "author": "Sohel",
             "price": "100.00",
             "shipping":"free",
-            "brand":"Lauren Ralph Lauren",
+            "brand":"RL",
             "size":"L"
           },
           {
@@ -195,7 +195,7 @@
             "author": "zakaria",
             "price":"323.00",
             "shipping":"free",
-            "brand":"under armour",
+            "brand":"UA",
             "size":"L"
           },
           {
@@ -204,7 +204,7 @@
             "author": "zakaria",
             "price":"212.00",
             "shipping":"free",
-            "brand":"under armour",
+            "brand":"UA",
             "size":"L"
 
           },
@@ -214,7 +214,7 @@
             "author": "zakaria",
             "price":"211.00",
             "shipping":"free",
-            "brand":"under armour",
+            "brand":"UA",
             "size":"XXL"
 
           }

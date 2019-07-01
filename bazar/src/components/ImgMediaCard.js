@@ -38,15 +38,32 @@ const useStyles = makeStyles({
 });
 
 
+let pair = { 
+  XS : 'size',
+  S:'size',
+  M:'size',
+  L:'size',
+
+  XL : 'size',
+  XXL:'size',
+  XXXL:'size',
+
+  RL : 'brand',
+  NIKE:'brand',
+  UA:'brand'
+
+} 
+
 
   function ObjectToUrlParam(obj){
   let param = '';  
   Object.entries(obj).forEach(entry => {
 
-    let key = entry[0];
-    let value = entry[1];
-    if (value){
-      param = param + "&size=" + key ;
+    let value = entry[0];
+    let key = pair[value]
+    let exist = entry[1];
+    if (exist){
+      param = param + "&" + key + "="+ value ;
     }
     
   });

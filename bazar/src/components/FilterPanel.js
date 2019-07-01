@@ -45,8 +45,10 @@ const useStyles = makeStyles({
 
 
 const FilterPanel = ({parentCallback}) => {
+
   const [hasError, setErrors] = useState(false);
   const [filters, setFilters  ] = useState(null);
+ 
 
   //"XS=false&S=false&M=false&L=true&XL=false&XXL=false&XXXL=false"
 
@@ -59,7 +61,13 @@ const [state, setState] = React.useState({
     XL: false,
     XXL: false,
     XXL: false,
-    XXXL: false
+    XXXL: false,
+
+    RL:false, 
+    NIKE:false,
+    UA:false,
+
+
 
 
   });
@@ -67,8 +75,6 @@ const [state, setState] = React.useState({
   const handleChange = name => event => {
     setState({ ...state, [name]: event.target.checked });
     parentCallback({ ...state, [name]: event.target.checked });
-
-
   };
 
 
@@ -100,8 +106,9 @@ const [state, setState] = React.useState({
 
   
     return (
+      <Fragment>
     <FormControl component="fieldset">
-          <FormLabel component="legend">Sizes</FormLabel>
+          <FormLabel component="legend">SIZES</FormLabel>
         
         <FormGroup row>
           <FormControlLabel
@@ -192,6 +199,58 @@ const [state, setState] = React.useState({
           
         </FormGroup>
         </FormControl>
+
+
+            <br/><br/>
+
+    <FormControl component="fieldset">
+          <FormLabel component="legend">BRANDS</FormLabel>
+        
+        <FormGroup row>
+          <FormControlLabel
+            control={
+              <Checkbox checked={state.RL}
+               onChange={handleChange('RL')}
+               value="RL" />
+            }
+            label="RL"
+          />
+    
+          <FormControlLabel
+            control={
+              <Checkbox
+                checked={state.NIKE}
+                onChange={handleChange('NIKE')}
+                value="NIKE"
+                color="primary"
+              />
+            }
+            label="NIKE"
+          />
+
+<FormControlLabel
+            control={
+              <Checkbox
+                checked={state.UA}
+                onChange={handleChange('UA')}
+                value="UA"
+                color="primary"
+              />
+            }
+            label="UA"
+          />
+
+
+
+
+         
+          
+          
+        </FormGroup>
+        </FormControl>
+
+        </Fragment>
+
         
     )
 
