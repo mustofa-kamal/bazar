@@ -39,6 +39,23 @@ const useStyles = makeStyles({
 
 
 
+  function ObjectToUrlParam(obj){
+  let param = '';  
+  Object.entries(obj).forEach(entry => {
+
+    let key = entry[0];
+    let value = entry[1];
+    if (value){
+      param = param + "&size=" + key ;
+    }
+    
+  });
+  return param;
+  
+  }
+
+
+
 const GalleryItem = (props) => {
   const classes = useStyles();
 
@@ -124,24 +141,46 @@ const GalleryItem = (props) => {
 
 
 
+
+
+
+
+ 
+
+
+ 
+
+
+
+
+
 const ImgMediaCard = (props) => {
   const [hasError, setErrors] = useState(false);
   const [items, setItems  ] = useState([]);
   const offset = props.offset;
   const selectedSortItem = props.selectedSortItem;
 
+  const checkedFilterItems=props.checkedFilterItems;
+
+  let urlParam='';
+  if (checkedFilterItems){
+    urlParam = ObjectToUrlParam(checkedFilterItems);
+  }
+
   const limit = 10
 
   let page = (offset/limit)+1;
 
-  //http://localhost:3001/title?_page=1&_limit=5
+  ///articles/1/comments?author.username=rpierlot
+  //"http://localhost:3001/title?_page=1&_limit=10&_sort=size"
 
-
-  //"_page="+page+"&_"+_limit+"="+limit
-
-
+  //"XS=false&S=false&M=false&L=true&XL=false&XXL=false&XXXL=false"
+ 
   async function fetchData() {
-    let res = await fetch("http://localhost:3001/title?_page="+page+"&_limit="+limit+"&_sort="+selectedSortItem);
+    let url = "http://localhost:3001/title?_page="+page+"&_limit="+
+    limit+"&_sort="+selectedSortItem +""+ urlParam
+   
+    let res = await fetch(url);
     res
       .json()
       .then(res => setItems(res))
@@ -150,7 +189,7 @@ const ImgMediaCard = (props) => {
 
   useEffect(() => {
     fetchData()
-  }, [offset,selectedSortItem])
+  }, [offset,selectedSortItem,urlParam])
 
   return (
 

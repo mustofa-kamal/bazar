@@ -39,59 +39,35 @@ const useStyles = makeStyles({
 
 
 
-const Filters = (props) => {
-  const classes = useStyles();
-
-  return (
-
-    <Fragment>
-    
-{props.filters.size.map((size, i) =>
-
-  <div  key={i}>{size}</div>
-
-)}
-
-
-{props.filters.material.map((material, i) =>
-
-  <div>{material}</div>
-
-)}
-
-<CheckboxControls/>
-
-
-   
-
-    </Fragment>
-
-    
-  )
-
-}
 
 
 
 
-const FilterPanel = (props) => {
+
+const FilterPanel = ({parentCallback}) => {
   const [hasError, setErrors] = useState(false);
   const [filters, setFilters  ] = useState(null);
 
 
 const [state, setState] = React.useState({
-    checkedXS: false,
-    checkedS: false,
-    checkedM: false,
+    XS: false,
+    S: false,
+    M: false,
     
-    checkedL: false,
-    checkedXL: false,
-    checkedXXL: false,
-    checkedXXL: false,
+    L: false,
+    XL: false,
+    XXL: false,
+    XXL: false,
+    XXXL: false
+
+
   });
 
   const handleChange = name => event => {
     setState({ ...state, [name]: event.target.checked });
+    parentCallback({ ...state, [name]: event.target.checked });
+
+
   };
 
 
@@ -119,62 +95,104 @@ const [state, setState] = React.useState({
     
     
     
-   /*  {if (filters){
-      return  <Filters filters={filters} />
-      
-    } else{
-        return <></>
-    }
-  } */
+  
 
-  {if (filters){
+  
     return (
     <FormControl component="fieldset">
-          <FormLabel component="legend">Size</FormLabel>
+          <FormLabel component="legend">Sizes</FormLabel>
         
         <FormGroup row>
           <FormControlLabel
             control={
-              <Checkbox checked={state.checkedA}
-               onChange={handleChange('checkedA')}
-               value="checkedA" />
+              <Checkbox checked={state.XS}
+               onChange={handleChange('XS')}
+               value="XS" />
             }
-            label="ES"
+            label="XS"
           />
     
           <FormControlLabel
             control={
               <Checkbox
-                checked={state.checkedB}
-                onChange={handleChange('checkedB')}
-                value="checkedB"
+                checked={state.S}
+                onChange={handleChange('S')}
+                value="S"
                 color="primary"
               />
             }
             label="S"
           />
-          <FormControlLabel control={<Checkbox value="checkedC" />} label="M" />
-          <FormControlLabel disabled control={<Checkbox value="checkedD" />} label="Disabled" />
-          <FormControlLabel disabled control={<Checkbox checked value="checkedE" />} label="Disabled" />
-          <FormControlLabel
+
+<FormControlLabel
             control={
               <Checkbox
-                checked={state.checkedF}
-                onChange={handleChange('checkedF')}
-                value="checkedF"
-                indeterminate
+                checked={state.M}
+                onChange={handleChange('M')}
+                value="M"
+                color="primary"
               />
             }
-            label="Indeterminate"
+            label="M"
           />
+
+<FormControlLabel
+            control={
+              <Checkbox
+                checked={state.L}
+                onChange={handleChange('L')}
+                value="L"
+                color="primary"
+              />
+            }
+            label="L"
+          />
+
+<FormControlLabel
+            control={
+              <Checkbox
+                checked={state.XL}
+                onChange={handleChange('XL')}
+                value="XL"
+                color="primary"
+              />
+            }
+            label="XL"
+          />
+
+<FormControlLabel
+            control={
+              <Checkbox
+                checked={state.XXL}
+                onChange={handleChange('XXL')}
+                value="XXL"
+                color="primary"
+              />
+            }
+            label="XXL"
+          />
+
+
+<FormControlLabel
+            control={
+              <Checkbox
+                checked={state.XXXL}
+                onChange={handleChange('XXXL')}
+                value="XXXL"
+                color="primary"
+              />
+            }
+            label="XXXL"
+          />
+
+
+         
           
           
         </FormGroup>
         </FormControl>
         
-    )} else{
-        return (<></>)
-    }
+    )
 
 
     
@@ -182,7 +200,7 @@ const [state, setState] = React.useState({
   
   
   }
-}
+
   
        
   

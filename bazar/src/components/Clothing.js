@@ -105,7 +105,10 @@ function Clothing() {
                 ><Selects parentCallback={callbackSelect}/>
                 </Grid>
 
-                <ImgMediaCard offset={offset} selectedSortItem={selectedSortItem}/>
+                <ImgMediaCard offset={offset} selectedSortItem={selectedSortItem}
+                
+                checkedFilterItems={checkedFilterItems}
+                />
 
               </Paper>
 
