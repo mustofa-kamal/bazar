@@ -37,7 +37,7 @@ import { withStyles } from "@material-ui/core/styles";
 function Layout(props) {
   return (
     <Fragment>
-      <div style={{paddingLeft:20}}>
+      <div style={{paddingLeft:20, paddingRight:20}}>
         <SimpleBreadcrumbs/>
         <br/>
         {props.children}

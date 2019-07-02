@@ -93,10 +93,10 @@ const GalleryItem = (props) => {
                 <CardMedia
                   component="img"
                   alt="Contemplative Reptile"
-                  height="140"
+                  height="200"
                   image={props.img}
                   title="Contemplative Reptile"
-                  style={{width:"30%"}}
+                  style={{width:"150px", border:"1px solid #dddddd"}}
                 />
                 <CardContent style={{width:"70%"}}>
                   <Typography gutterBottom variant="subtitle1" component="h2" style={{fontSize:"1.4rem"}}>
@@ -149,12 +149,13 @@ const GalleryItem = (props) => {
 
 
               </CardActionArea>
-              <CardActions>
+              <br/>
+             {/*  <CardActions>
                 <Button size="small" color="primary"style={{fontWeight:"bold", fontSize:"1.2rem"}}>
                   Add to bag
                 </Button>
               
-              </CardActions>
+              </CardActions> */}
             
             </Card>
             </Fragment>

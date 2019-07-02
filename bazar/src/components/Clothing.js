@@ -29,7 +29,7 @@ const useStyles = makeStyles(theme => ({
 
   },
   paper: {
-    width: "95%"
+    width: "100%"
   },
 
   control: {
@@ -91,12 +91,12 @@ function Clothing() {
 
           
 
-            <Grid key={1} item xs={3}>
+            <Grid key={1} item xs={2}>
 
             <FilterPanel parentCallback={callbackFilter}/>  
             </Grid>
 
-            <Grid key={2} item xs={9}>
+            <Grid key={2} item xs={10}>
               <Paper className={classes.paper} >
                 <Grid
                   container
@@ -127,11 +127,11 @@ function Clothing() {
         <Grid item xs={12}>
           <Grid container justify="center" spacing={2}>
 
-            <Grid key={1} item xs={3}>
+            <Grid key={1} item xs={2}>
               <div></div>
             </Grid>
 
-            <Grid key={2} item xs={9}>
+            <Grid key={2} item xs={10}>
               <Paper className={classes.paper} >
                  
 
