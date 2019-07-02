@@ -50,7 +50,14 @@ let pair = {
 
   RL : 'brand',
   NIKE:'brand',
-  UA:'brand'
+  UA:'brand',
+
+
+  Lilen : 'material',
+  Polyester:'material',
+  Cotton:'material'
+
+
 
 } 
 
@@ -92,7 +99,7 @@ const GalleryItem = (props) => {
                   style={{width:"30%"}}
                 />
                 <CardContent style={{width:"70%"}}>
-                  <Typography gutterBottom variant="subtitle2" component="h2">
+                  <Typography gutterBottom variant="subtitle1" component="h2" style={{fontSize:"1.4rem"}}>
                       {props.title}
                   </Typography>
 
@@ -102,7 +109,9 @@ const GalleryItem = (props) => {
                 
                     
                         <ul className={classes.u}>
-                          <li><Typography  variant="subtitle2" component="h2">{props.price} taka</Typography></li>
+                          <li><Typography  variant="subtitle2" component="h2" style={{fontWeight:"bold", fontSize:"1.3rem"}}>
+                                {props.price} taka
+                          </Typography></li>
                           <li>{props.shipping} - sheeping</li>
                         </ul>
                     
@@ -115,7 +124,7 @@ const GalleryItem = (props) => {
 
                       <li>Pattern: Solid</li>
 
-                      <li>Material: 100% Cotton</li>
+                      <li>Material: 100% {props.material}</li>
 
                       <li>Size: {props.size}</li>
 
@@ -141,7 +150,7 @@ const GalleryItem = (props) => {
 
               </CardActionArea>
               <CardActions>
-                <Button size="small" color="primary">
+                <Button size="small" color="primary"style={{fontWeight:"bold", fontSize:"1.2rem"}}>
                   Add to bag
                 </Button>
               
@@ -214,7 +223,7 @@ const ImgMediaCard = (props) => {
 
         <GalleryItem key={i} img={item.img} title={item.title} 
         price={item.price} shipping={item.shipping} brand={item.brand}
-        size={item.size}/>
+        size={item.size}      material={item.material}/>
 
     )
   

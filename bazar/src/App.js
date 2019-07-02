@@ -19,6 +19,15 @@ import { Route, BrowserRouter as Router, MemoryRouter } from "react-router-dom";
 import Footer from './components/Footer';
 import RecentlyViewed from './components/RecentlyViewed'
 
+import { createMuiTheme, makeStyles } from '@material-ui/core/styles';
+import { ThemeProvider } from '@material-ui/styles';
+
+import { withStyles } from "@material-ui/core/styles";
+
+
+
+
+
 
 
 
@@ -28,7 +37,6 @@ import RecentlyViewed from './components/RecentlyViewed'
 function Layout(props) {
   return (
     <Fragment>
-      <PrimarySearchAppBar/> 
       <div style={{paddingLeft:20}}>
         <SimpleBreadcrumbs/>
         <br/>
@@ -82,9 +90,25 @@ function SimpleBreadcrumbs() {
 }
 
 
+const styles = theme => ({
+  "@global": {
+    // MUI typography elements use REMs, so you can scale the global
+    // font size by setting the font-size on the <html> element.
+    html: {
+      fontSize: '.6rem',
+      
+      
+    }
+  }
+});
 
 
-function App() {
+
+
+
+
+const  App =()=> {
+  
   return (
     <BrowserRouter>
       <Layout>
@@ -95,4 +119,7 @@ function App() {
    </BrowserRouter>
   );
 }
-export default App;
+
+export default withStyles(styles)(App);
+
+

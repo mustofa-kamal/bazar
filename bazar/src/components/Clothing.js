@@ -25,12 +25,13 @@ import FilterPanel from './FilterPanel';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    flexGrow: 1,
+    flexGrow: 1
 
   },
   paper: {
-    width: "95%",
+    width: "95%"
   },
+
   control: {
     padding: theme.spacing(2),
   },

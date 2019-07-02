@@ -9,7 +9,8 @@
             "price": "100.00",
             "shipping":"free",
             "brand":"RL",
-            "size":"L"
+            "size":"L",
+            "material":"Cotton"
           },
           {
             "img": "http://localhost:3000/camera.jpg",
@@ -18,7 +19,9 @@
             "price":"200.00",
             "shipping":"free",
             "brand":"NIKE",
-            "size":"XS"
+            "size":"XS",
+            "material":"Cotton"
+
 
             
           },
@@ -29,7 +32,9 @@
             "price":"250.00",
             "shipping":"free",
             "brand":"NIKE",
-            "size":"XXL"
+            "size":"XXL",
+            "material":"Cotton"
+
 
           },
           {
@@ -39,7 +44,9 @@
             "price":"222.00",
             "shipping":"10.00",
             "brand":"NIKE",
-            "size":"XXXL"
+            "size":"XXXL",
+            "material":"Cotton"
+
 
           },
           {
@@ -49,7 +56,9 @@
             "price":"323.00",
             "shipping":"free",
             "brand":"UA",
-            "size":"S"
+            "size":"S",
+            "material":"Silk"
+
           },
           {
             "img": "http://localhost:3000/shirt1.jpg",
@@ -58,7 +67,9 @@
             "price":"212.00",
             "shipping":"free",
             "brand":"UA",
-            "size":"L"
+            "size":"L",
+            "material":"Lilen"
+
 
           },
           {
@@ -68,7 +79,9 @@
             "price":"211.00",
             "shipping":"free",
             "brand":"UA",
-            "size":"M"
+            "size":"M",
+            "material":"Lilen"
+
 
           },
 
@@ -84,7 +97,9 @@
             "price": "100.00",
             "shipping":"free",
             "brand":"RL",
-            "size":"S"
+            "size":"S",
+            "material":"Cotton"
+
           },
           {
             "img": "http://localhost:3000/ck-shirt2.jpg",
@@ -93,7 +108,9 @@
             "price":"200.00",
             "shipping":"free",
             "brand":"NIKE",
-            "size":"XL"
+            "size":"XL",
+            "material":"Polyester"
+
 
             
           },
@@ -104,7 +121,9 @@
             "price":"250.00",
             "shipping":"free",
             "brand":"NIKE",
-            "size":"L"
+            "size":"L",
+            "material":"Polyester"
+
 
 
           },
@@ -115,7 +134,9 @@
             "price":"222.00",
             "shipping":"10.00",
             "brand":"NIKE",
-            "size":"L"
+            "size":"L",
+            "material":"Polyester"
+
 
           },
           {
@@ -125,7 +146,9 @@
             "price":"323.00",
             "shipping":"free",
             "brand":"UA",
-            "size":"L"
+            "size":"L",
+            "material":"Polyester"
+
           },
           {
             "img": "http://localhost:3000/ck-shirt6.jpg",
@@ -134,7 +157,9 @@
             "price":"212.00",
             "shipping":"free",
             "brand":"UA",
-            "size":"XL"
+            "size":"XL",
+            "material":"Polyester"
+
 
           },
           {
@@ -144,7 +169,9 @@
             "price":"211.00",
             "shipping":"free",
             "brand":"UA",
-            "size":"XXL"
+            "size":"XXL",
+            "material":"Cotton"
+
 
           },
 
@@ -156,7 +183,9 @@
             "price": "100.00",
             "shipping":"free",
             "brand":"RL",
-            "size":"L"
+            "size":"L",
+            "material":"Polyester"
+
           },
           {
             "img": "http://localhost:3000/ck-shirt9.jpg",
@@ -165,7 +194,9 @@
             "price":"200.00",
             "shipping":"free",
             "brand":"NIKE",
-            "size":"L"
+            "size":"L",
+            "material":"Polyester"
+
 
             
           },
@@ -176,7 +207,9 @@
             "price":"250.00",
             "shipping":"free",
             "brand":"NIKE",
-            "size":"M"
+            "size":"M",
+            "material":"Polyester"
+
 
           },
           {
@@ -186,7 +219,9 @@
             "price":"222.00",
             "shipping":"10.00",
             "brand":"NIKE",
-            "size":"M"
+            "size":"M",
+            "material":"Polyester"
+
 
           },
           {
@@ -196,7 +231,9 @@
             "price":"323.00",
             "shipping":"free",
             "brand":"UA",
-            "size":"L"
+            "size":"L",
+            "material":"Polyester"
+
           },
           {
             "img": "http://localhost:3000/ck-shirt15.jpg",
@@ -205,7 +242,9 @@
             "price":"212.00",
             "shipping":"free",
             "brand":"UA",
-            "size":"L"
+            "size":"L",
+            "material":"Polyester"
+
 
           },
           {
@@ -215,7 +254,9 @@
             "price":"211.00",
             "shipping":"free",
             "brand":"UA",
-            "size":"XXL"
+            "size":"XXL",
+            "material":"Polyester"
+
 
           }
 

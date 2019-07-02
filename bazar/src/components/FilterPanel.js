@@ -23,6 +23,14 @@ import FormLabel from '@material-ui/core/FormLabel';
 
 
 
+
+
+
+
+
+
+
+
 const useStyles = makeStyles({
 
   u: {
@@ -107,15 +115,17 @@ const [state, setState] = React.useState({
   
     return (
       <Fragment>
-    <FormControl component="fieldset">
+
+<FormControl component="fieldset">
           <FormLabel component="legend">SIZES</FormLabel>
         
-        <FormGroup row>
+        <FormGroup column>
           <FormControlLabel
             control={
               <Checkbox checked={state.XS}
                onChange={handleChange('XS')}
                value="XS" />
+               
             }
             label="XS"
           />
@@ -206,7 +216,7 @@ const [state, setState] = React.useState({
     <FormControl component="fieldset">
           <FormLabel component="legend">BRANDS</FormLabel>
         
-        <FormGroup row>
+        <FormGroup column>
           <FormControlLabel
             control={
               <Checkbox checked={state.RL}
@@ -240,16 +250,61 @@ const [state, setState] = React.useState({
             label="UA"
           />
 
+</FormGroup>
+        </FormControl>
+
+
+
+<br/><br/>
+
+<FormControl component="fieldset">
+          <FormLabel component="legend">MATERIAL</FormLabel>
+        
+        <FormGroup column>
+          <FormControlLabel
+            control={
+              <Checkbox checked={state.Polyester}
+               onChange={handleChange('Polyester')}
+               value="Polyester" />
+            }
+            label="Polyester"
+          />
+    
+          <FormControlLabel
+            control={
+              <Checkbox
+                checked={state.Cotton}
+                onChange={handleChange('Cotton')}
+                value="Cotton"
+                color="primary"
+              />
+            }
+            label="Cotton"
+          />
+
+<FormControlLabel
+            control={
+              <Checkbox
+                checked={state.Lilen}
+                onChange={handleChange('Lilen')}
+                value="Lilen"
+                color="primary"
+              />
+            }
+            label="Lilen"
+          />
+
 
 
 
          
           
           
-        </FormGroup>
-        </FormControl>
+       
 
-        </Fragment>
+       </FormGroup>
+       </FormControl>
+       </Fragment>
 
         
     )
