@@ -65,7 +65,7 @@ export default function CarouselList() {
 
   const [itemsInSlide, setItemsInSlide] = useState(1);
 
-  const [responsive, setResponsive] = useState({ 0: { items: 3 } });
+  const [responsive, setResponsive] = useState({ 0: { items: 5 } });
 
   const [galleryItems, setGalleryItems] = useState([]);
 
@@ -79,7 +79,7 @@ export default function CarouselList() {
     return (
       <RouterLink to="/repos/reactjs/react-router">
       <div className={classes.root} >
-        <GridList className={classes.gridList} cols={1}>
+        <GridList className={classes.gridList} cols={1} style={{height:"210px", width:"150px"}}>
           <GridListTile key={props.img}>
             <img src={props.img} alt={props.title}  />
             <GridListTileBar
@@ -154,8 +154,8 @@ export default function CarouselList() {
         onInitialized={handleOnSlideChange}
         onSlideChanged={handleOnSlideChange}
         onResized={handleOnSlideChange}
-        playButtonEnabled={true}
-        disableAutoPlayOnAction={true}
+        playButtonEnabled={false}
+        disableAutoPlayOnAction={false}
         showSlideInfo={true}
         duration={400}
 
