@@ -26,6 +26,10 @@ import { withStyles } from "@material-ui/core/styles";
 
 import Headers from './components/Headers'
 
+import Signin from './components/Signin'
+
+import Register from './components/Register'
+
 
 
 
@@ -118,7 +122,11 @@ const  App =()=> {
       <Layout>
         <Route exact path="/" component={Home}/>
         <Route path="/menClothing"   component={()=><Clothing gender="men" />}/>
-        <Route path="/womenClothing" component={()=><Clothing gender="women" />}/>  
+        <Route path="/womenClothing" component={()=><Clothing gender="women" />}/> 
+        <Route path="/Signin" component={()=><Signin />}/>  
+        <Route path="/Register" component={()=><Register />}/>  
+
+ 
       </Layout>
    </BrowserRouter>
   );
