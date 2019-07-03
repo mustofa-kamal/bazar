@@ -151,7 +151,7 @@ const GalleryItem = (props) => {
               </CardActionArea>
               <br/>
              {/*  <CardActions>
-                <Button size="small" color="primary"style={{fontWeight:"bold", fontSize:"1.2rem"}}>
+                <Button size="small" color="primary" style={{fontWeight:"bold", fontSize:"1.2rem"}}>
                   Add to bag
                 </Button>
               

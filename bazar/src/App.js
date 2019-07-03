@@ -24,6 +24,8 @@ import { ThemeProvider } from '@material-ui/styles';
 
 import { withStyles } from "@material-ui/core/styles";
 
+import Headers from './components/Headers'
+
 
 
 
@@ -37,7 +39,9 @@ import { withStyles } from "@material-ui/core/styles";
 function Layout(props) {
   return (
     <Fragment>
+      <Headers/>
       <div style={{paddingLeft:20, paddingRight:20}}>
+        <br/>
         <SimpleBreadcrumbs/>
         <br/>
         {props.children}
