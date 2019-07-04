@@ -35,7 +35,7 @@ export default function Headers() {
 
       <Box display="flex" p={0}>
 
-      <Box p={.4} flexGrow={1}>
+      <Box p={1} flexGrow={1}>
 
 
 
@@ -65,27 +65,15 @@ export default function Headers() {
 
                 
                
-                <Box p={.4} flexGrow={0}>
+                <Box p={1}>
 
                 <Typography variant="button" color="primary">
                       <RouterLink to="Signin">
-                          link                    
-                      </RouterLink>                    
+                          Icon
+                    </RouterLink>                    
                 </Typography>
 
                 </Box>
-
-                <Box p={.4} flexGrow={0} >
-
-              <Typography variant="button" color="primary">
-                    <RouterLink to="Signin">
-                        My Store
-                  </RouterLink>                    
-              </Typography>
-
-              </Box>
-
-
 
 
                   
