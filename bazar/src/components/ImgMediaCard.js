@@ -189,10 +189,20 @@ const ImgMediaCard = (props) => {
 
   const checkedFilterItems=props.checkedFilterItems;
 
+  const searchTxt=props.searchTxt;
+
+
   let urlParam='';
   if (checkedFilterItems){
     urlParam = ObjectToUrlParam(checkedFilterItems);
   }
+
+  if (searchTxt){
+    urlParam = urlParam + "&q="+searchTxt
+  }
+
+ 
+
 
   const limit = 10
 
@@ -205,7 +215,9 @@ const ImgMediaCard = (props) => {
  
   async function fetchData() {
     let url = "http://localhost:3001/title?_page="+page+"&_limit="+
-    limit+"&_sort="+selectedSortItem +""+ urlParam
+    limit+"&_sort="+selectedSortItem +""+ urlParam;
+
+
    
     let res = await fetch(url);
     res

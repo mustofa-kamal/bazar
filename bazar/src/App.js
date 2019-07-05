@@ -30,7 +30,6 @@ import Signin from './components/Signin'
 
 import Register from './components/Register'
 
-import SearchBox from './components/SearchBox'
 import Grid from '@material-ui/core/Grid';
 
 
@@ -53,8 +52,7 @@ function Layout(props) {
       <Headers/>
       <div style={{paddingLeft:20, paddingRight:20}}>
        <br/>
-       <SearchBox/>
-        <br/>
+      
         <SimpleBreadcrumbs/>
         <br/>
         {props.children}

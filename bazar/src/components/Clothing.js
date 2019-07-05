@@ -19,6 +19,9 @@ import Box from '@material-ui/core/Box';
 import FlatPagination from './FlatPagination'
 import FilterPanel from './FilterPanel';
 
+import SearchBox from './SearchBox'
+
+
 
 
 
@@ -53,6 +56,9 @@ function Clothing() {
 
   const [checkedFilterItems, setCheckedFilterItems ] = useState([]);
 
+  const [searchTxt, setSearchTxt ] = useState('');
+
+
 
 
 
@@ -70,11 +76,19 @@ function Clothing() {
     setCheckedFilterItems(checkedFilterItems);
   }
 
+  const callbackSearchTxt= (searchTxt) => {
+    setSearchTxt(searchTxt);
+  }
+
 
   const classes = useStyles();
 
   return (
     <Fragment>
+
+        <SearchBox parentCallback={callbackSearchTxt}/>
+        
+          <br/>
      
           <Grid container className={classes.root} justify="center" spacing={2}>
 
@@ -91,13 +105,14 @@ function Clothing() {
                   container
                   direction="row"
                   justify="flex-end"
-                  alignItems="center"
-                ><Selects parentCallback={callbackSelect}/>
+                  alignItems="center">
+                  
+                <Selects parentCallback={callbackSelect}/>
                 </Grid>
 
                 <ImgMediaCard offset={offset} selectedSortItem={selectedSortItem}
                 
-                checkedFilterItems={checkedFilterItems}
+                checkedFilterItems={checkedFilterItems} searchTxt={searchTxt}
                 />
 
               </Paper>

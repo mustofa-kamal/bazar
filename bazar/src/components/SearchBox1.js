@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment,useEffect, useState  } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import InputBase from '@material-ui/core/InputBase';
@@ -19,8 +19,7 @@ const useStyles = makeStyles({
   root: {
     padding: '2px 4px',
     display: 'flex',
-    alignItems: 'center',
-    width: "100%"
+    alignItems: 'center'
   },
   input: {
     marginLeft: 8,
@@ -37,7 +36,32 @@ const useStyles = makeStyles({
 });
 
 function CustomizedInputBase() {
+  const [searchInput, setSearchInput ] = useState('');
+
   const classes = useStyles();
+
+  const handleChange = (event) => {
+    setSearchInput(event.target.value)
+  };
+
+
+  
+
+
+  const handleOnKeyPress = (event) => {
+    console.log(`Pressed keyCode ${event.key}`);
+    setSearchInput(event.target.value)
+
+    if (event.key === 'Enter') {
+     
+      event.preventDefault();
+      console.log("enter is pressed");
+
+    }
+  }
+
+
+
 
   return (
     <Paper className={classes.root}>
@@ -46,6 +70,12 @@ function CustomizedInputBase() {
         className={classes.input}
         placeholder="Search"
         inputProps={{ 'aria-label': 'Search' }}
+        fullWidth={true}
+        name="searchInputName"
+        value={searchInput}
+        onChange={handleChange}
+        onKeyPress={handleOnKeyPress}
+
       />
       <IconButton className={classes.iconButton} aria-label="Search">
         <SearchIcon />
@@ -71,7 +101,12 @@ const useStyles1 = makeStyles(theme => ({
 }));
 
 export default function SearchBox() {
+
+
+
   const classes = useStyles1();
+
+
 
  
 
@@ -79,7 +114,24 @@ export default function SearchBox() {
     <Grid container className={classes.root} spacing={2}>
 
 <Grid item xs={2}>
-<div style={{border:"1px solid red", width:"20px", height:"30px"}}>dsf</div>
+
+
+
+
+
+
+
+<div style={{ display: "flex",flexDirection:"row"}}>
+<img src="logo.png" alt="icon" width="25" height="25" style={{display:"block"}}>
+</img>
+<div style={{lineHeight:"25px", textAlign:"center", paddingLeft:"8px"}}>Buy and Be Happy and Repeat </div>
+</div>
+
+
+
+
+
+
        
    </Grid>
 

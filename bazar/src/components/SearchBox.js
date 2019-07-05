@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import InputBase from '@material-ui/core/InputBase';
@@ -71,13 +71,47 @@ const useStyles1 = makeStyles(theme => ({
   },
 }));
 
-export default function SearchBox() {
-  const classes = useStyles1();
+export default function SearchBox({parentCallback}) {
+  const classes1 = useStyles1();
+
+  const classes = useStyles();
+
+
+  const [searchTxt, setSearchTxt ] = useState('');
+
+  const handleChange = (event) => {
+    setSearchTxt(event.target.value);
+  };
+
+
+  
+
+
+  const handleOnKeyPress = (event) => {
+    console.log(`Pressed keyCode ${event.key}`);
+
+    if (event.key === 'Enter') {
+     
+      event.preventDefault();
+      setSearchTxt(event.target.value);
+      parentCallback(event.target.value);
+
+      console.log("enter is pressed");
+
+    }
+  }
+
+
+
+
+
+
+
 
  
 
   return (
-    <Grid container className={classes.root} spacing={2}>
+    <Grid container className={classes1.root} spacing={2}>
 
 <Grid item xs={2}>
 
@@ -102,8 +136,32 @@ export default function SearchBox() {
    </Grid>
 
       <Grid item xs={10}>
+
+
+
        
-                <CustomizedInputBase/>
+      <Paper className={classes.root}>
+     
+     <InputBase
+       className={classes.input}
+       placeholder="Search"
+       inputProps={{ 'aria-label': 'Search' }}
+       fullWidth={true}
+       name="searchInput"
+       onChange={handleChange}
+       onKeyPress={handleOnKeyPress}
+
+     />
+     <IconButton className={classes.iconButton} aria-label="Search">
+       <SearchIcon />
+     </IconButton>
+    
+   </Paper>
+
+
+
+
+
             </Grid>
 
            
