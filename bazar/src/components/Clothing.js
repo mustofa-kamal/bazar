@@ -32,16 +32,7 @@ const useStyles = makeStyles(theme => ({
     width: "100%"
   },
 
-  control: {
-    padding: theme.spacing(2),
-  },
-
-
-  flexcontainer: {
-    display: "flex",
-    justifyContent: "flex-end"
-  }
-
+ 
 
 }));
 
@@ -53,7 +44,6 @@ const useStyles = makeStyles(theme => ({
 function Clothing() {
   useEffect(() => {
     document.body.style.backgroundColor = "#eeeeee";
-    console.log("mount")
   }, []);
 
   const [offset, setOffset ] = useState(0);
@@ -85,9 +75,8 @@ function Clothing() {
 
   return (
     <Fragment>
-      <Grid container className={classes.root} spacing={2}>
-        <Grid item xs={12}>
-          <Grid container justify="center" spacing={2}>
+     
+          <Grid container className={classes.root} justify="center" spacing={2}>
 
           
 
@@ -120,14 +109,13 @@ function Clothing() {
             </Grid>
 
           </Grid>
-        </Grid>
-      </Grid>
+       
 
-      <Grid container className={classes.root} spacing={2}>
-        <Grid item xs={12}>
-          <Grid container justify="center" spacing={2}>
+          <Grid container className={classes.root} justify="center" spacing={2}>
 
-            <Grid key={1} item xs={2}>
+          
+
+          <Grid key={1} item xs={2}>
               <div></div>
             </Grid>
 
@@ -151,9 +139,7 @@ function Clothing() {
               </Paper>
             </Grid>
           </Grid>
-        </Grid>
-      </Grid>
-
+      
 
 
 

@@ -25,22 +25,14 @@ import FilterPanel from './FilterPanel';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    flexGrow: 1,
+    flexGrow: 1
 
   },
   paper: {
-    width: "95%",
-  },
-  control: {
-    padding: theme.spacing(2),
+    width: "100%"
   },
 
-
-  flexcontainer: {
-    display: "flex",
-    justifyContent: "flex-end"
-  }
-
+ 
 
 }));
 
@@ -60,6 +52,11 @@ function Clothing() {
   const [selectedSortItem, setSelectedSortItem ] = useState("size");
 
 
+  const [checkedFilterItems, setCheckedFilterItems ] = useState([]);
+
+
+
+
   
 
   const callback = (offset) => {
@@ -68,25 +65,28 @@ function Clothing() {
 
   const callbackSelect= (selectedSortItem) => {
     setSelectedSortItem(selectedSortItem);
-}
+  }
+
+  const callbackFilter= (checkedFilterItems) => {
+    setCheckedFilterItems(checkedFilterItems);
+  }
 
 
   const classes = useStyles();
 
   return (
     <Fragment>
-      <Grid container className={classes.root} spacing={2}>
-        <Grid item xs={12}>
-          <Grid container justify="center" spacing={2}>
+     
+          <Grid container className={classes.root} justify="center" spacing={2}>
 
           
 
-            <Grid key={1} item xs={3} style={{border:"1px solid red"}}>
+            <Grid key={1} item xs={2}>
 
-            <FilterPanel/>  
+            <FilterPanel parentCallback={callbackFilter}/>  
             </Grid>
 
-            <Grid key={2} item xs={9}>
+            <Grid key={2} item xs={10}>
               <Paper className={classes.paper} >
                 <Grid
                   container
@@ -96,7 +96,10 @@ function Clothing() {
                 ><Selects parentCallback={callbackSelect}/>
                 </Grid>
 
-                <ImgMediaCard offset={offset} selectedSortItem={selectedSortItem}/>
+                <ImgMediaCard offset={offset} selectedSortItem={selectedSortItem}
+                
+                checkedFilterItems={checkedFilterItems}
+                />
 
               </Paper>
 
@@ -107,18 +110,17 @@ function Clothing() {
             </Grid>
 
           </Grid>
-        </Grid>
-      </Grid>
+       
 
       <Grid container className={classes.root} spacing={2}>
         <Grid item xs={12}>
           <Grid container justify="center" spacing={2}>
 
-            <Grid key={1} item xs={3}>
+            <Grid key={1} item xs={2}>
               <div></div>
             </Grid>
 
-            <Grid key={2} item xs={9}>
+            <Grid key={2} item xs={10}>
               <Paper className={classes.paper} >
                  
 
