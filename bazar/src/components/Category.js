@@ -60,15 +60,15 @@ function Category() {
       <Grid item xs={12}>
         <Grid container justify="center" spacing={spacing}>
           <Grid key={1} item>
-              <Fab component={Link} to="/menClothing" variant="round" size="large" color="primary" aria-label="Add" className={clsx(classes.fab, classes.circle)}>
-                  Men Clothing
+              <Fab component={Link} to="/man" variant="round" size="large" color="primary" aria-label="Add" className={clsx(classes.fab, classes.circle)}>
+                   Men Clothing
                   <AddIcon />
               </Fab>
           </Grid>
 
           <Grid key={2} item>
-            <Fab  component={Link} to="/womenClothing" variant="round" size="large" color="primary" aria-label="Add" className={clsx(classes.fab, classes.circle)}>
-              Woman Clothing
+            <Fab  component={Link} to="/woman" variant="round" size="large" color="primary" aria-label="Add" className={clsx(classes.fab, classes.circle)}>
+               Woman Clothing
               <AddIcon />
             </Fab>
           </Grid>

@@ -15,7 +15,7 @@ import GridListTileBar from '@material-ui/core/GridListTileBar';
 import IconButton from '@material-ui/core/IconButton';
 import StarBorderIcon from '@material-ui/icons/StarBorder';
 
-import { Link as RouterLink, BrowserRouter } from "react-router-dom";
+import { Link , BrowserRouter } from "react-router-dom";
 
 
 
@@ -114,7 +114,7 @@ const GalleryItem = (props) => {
                           <li><Typography  variant="subtitle2" component="h2" style={{fontWeight:"bold", fontSize:"1.3rem"}}>
                                 {props.price} taka
                           </Typography></li>
-                          <li>{props.shipping} - sheeping</li>
+                          <li>{props.shipping} - shipping</li>
                         </ul>
                     
                   </CardContent>
@@ -193,6 +193,8 @@ const ImgMediaCard = (props) => {
 
   const searchTxt=props.searchTxt;
 
+  const type = props.type;
+
 
   let urlParam='';
   if (checkedFilterItems){
@@ -200,8 +202,14 @@ const ImgMediaCard = (props) => {
   }
 
   if (searchTxt){
-    urlParam = urlParam + "&q="+searchTxt
+    urlParam = urlParam + "&q="+searchTxt;
   }
+
+  if (type){
+    urlParam = urlParam + "&q="+type
+  }
+
+  
 
  
 
@@ -231,19 +239,46 @@ const ImgMediaCard = (props) => {
   useEffect(() => {
     fetchData()
   }, [offset,selectedSortItem,urlParam])
+  
 
   return (
 
-    items.map((item, i) =>
+   
 
-    <RouterLink to="/menClothing/detail">
+    items.map((item, i, props) =>
+
+    <Link to={`${item.type}/${item.id}`}>
+
         <GalleryItem key={i} img={item.img} title={item.title} 
         price={item.price} shipping={item.shipping} brand={item.brand}
-        size={item.size}  material={item.material}/>
-    </RouterLink>
+        size={item.size}  material={item.material} />
+    </Link>
     
 
     )
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+    
+    
+
+    
+
+
+
+
   
     );
 

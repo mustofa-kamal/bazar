@@ -111,7 +111,7 @@ export default function SearchBox({parentCallback}) {
 
 
 <div style={{ display: "flex",flexDirection:"row"}}>
-<img src="logo.png" alt="icon" width="25" height="25" style={{display:"block"}}>
+<img src="logo.png" alt="icon" width="25  " height="25" style={{display:"block"}}>
 </img>
 <div style={{lineHeight:"25px", textAlign:"center", paddingLeft:"8px"}}>Buy and Be Happy and Repeat </div>
 </div>
