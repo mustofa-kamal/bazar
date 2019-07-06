@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useState, useRef } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import InputBase from '@material-ui/core/InputBase';
@@ -35,26 +35,8 @@ const useStyles = makeStyles({
   },
 });
 
-function CustomizedInputBase() {
-  const classes = useStyles();
 
-  return (
-    <Paper className={classes.root}>
-     
-      <InputBase
-        className={classes.input}
-        placeholder="Search"
-        inputProps={{ 'aria-label': 'Search' }}
-        fullWidth={true}
-        name="searchInput"
-      />
-      <IconButton className={classes.iconButton} aria-label="Search">
-        <SearchIcon />
-      </IconButton>
-     
-    </Paper>
-  );
-}
+
 
 
 
@@ -79,6 +61,9 @@ export default function SearchBox({parentCallback}) {
 
   const [searchTxt, setSearchTxt ] = useState('');
 
+  const searchInput = useRef();
+
+
   const handleChange = (event) => {
     setSearchTxt(event.target.value);
   };
@@ -91,13 +76,18 @@ export default function SearchBox({parentCallback}) {
     console.log(`Pressed keyCode ${event.key}`);
 
     if (event.key === 'Enter') {
-     
       event.preventDefault();
-      setSearchTxt(event.target.value);
-      parentCallback(event.target.value);
-
+      searchNow(event.target);
+     
 
     }
+  }
+
+  const searchNow = (target) => {
+    
+    setSearchTxt(target.value);
+    parentCallback(target.value);
+
   }
 
 
@@ -146,12 +136,13 @@ export default function SearchBox({parentCallback}) {
        placeholder="Search"
        inputProps={{ 'aria-label': 'Search' }}
        fullWidth={true}
-       name="searchInput"
-       onChange={handleChange}
+       onChange={handleChange}  
        onKeyPress={handleOnKeyPress}
+       inputRef={searchInput}
 
      />
-     <IconButton className={classes.iconButton} aria-label="Search">
+     <IconButton className={classes.iconButton} aria-label="Search" onClick={()=>searchNow(searchInput.current)}>
+
        <SearchIcon />
      </IconButton>
     
