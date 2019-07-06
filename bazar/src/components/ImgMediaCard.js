@@ -88,6 +88,8 @@ const GalleryItem = (props) => {
 
 
         <Fragment>
+
+          
             <Card className={classes.card} square={true} >
               <CardActionArea style={{display:"flex"}}>
                 <CardMedia
@@ -234,9 +236,12 @@ const ImgMediaCard = (props) => {
 
     items.map((item, i) =>
 
+    <RouterLink to="/menClothing/detail">
         <GalleryItem key={i} img={item.img} title={item.title} 
         price={item.price} shipping={item.shipping} brand={item.brand}
-        size={item.size}      material={item.material}/>
+        size={item.size}  material={item.material}/>
+    </RouterLink>
+    
 
     )
   

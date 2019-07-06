@@ -96,7 +96,6 @@ export default function SearchBox({parentCallback}) {
       setSearchTxt(event.target.value);
       parentCallback(event.target.value);
 
-      console.log("enter is pressed");
 
     }
   }

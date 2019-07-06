@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState} from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -12,7 +12,7 @@ import Paper from '@material-ui/core/Paper';
 import Selects from './Selects'
 import CarouselList from './CarouselList';
 import Footer from './Footer'
-import  ImgMediaCard from './ImgMediaCard'
+import ImgMediaCard from './ImgMediaCard'
 import Box from '@material-ui/core/Box';
 
 
@@ -35,7 +35,7 @@ const useStyles = makeStyles(theme => ({
     width: "100%"
   },
 
- 
+
 
 }));
 
@@ -49,34 +49,34 @@ function Clothing() {
     document.body.style.backgroundColor = "#eeeeee";
   }, []);
 
-  const [offset, setOffset ] = useState(0);
+  const [offset, setOffset] = useState(0);
 
-  const [selectedSortItem, setSelectedSortItem ] = useState("size");
-
-
-  const [checkedFilterItems, setCheckedFilterItems ] = useState([]);
-
-  const [searchTxt, setSearchTxt ] = useState('');
+  const [selectedSortItem, setSelectedSortItem] = useState("size");
 
 
+  const [checkedFilterItems, setCheckedFilterItems] = useState([]);
+
+  const [searchTxt, setSearchTxt] = useState('');
 
 
 
-  
+
+
+
 
   const callback = (offset) => {
-      setOffset(offset);
+    setOffset(offset);
   }
 
-  const callbackSelect= (selectedSortItem) => {
+  const callbackSelect = (selectedSortItem) => {
     setSelectedSortItem(selectedSortItem);
   }
 
-  const callbackFilter= (checkedFilterItems) => {
+  const callbackFilter = (checkedFilterItems) => {
     setCheckedFilterItems(checkedFilterItems);
   }
 
-  const callbackSearchTxt= (searchTxt) => {
+  const callbackSearchTxt = (searchTxt) => {
     setSearchTxt(searchTxt);
   }
 
@@ -86,75 +86,75 @@ function Clothing() {
   return (
     <Fragment>
 
-        <SearchBox parentCallback={callbackSearchTxt}/>
-        
-          <br/>
-     
-          <Grid container className={classes.root} justify="center" spacing={2}>
+      <SearchBox parentCallback={callbackSearchTxt} />
 
-          
+      <br />
 
-            <Grid key={1} item xs={2}>
+      <Grid container className={classes.root} justify="center" spacing={2}>
 
-            <FilterPanel parentCallback={callbackFilter}/>  
+
+
+        <Grid key={1} item xs={2}>
+
+          <FilterPanel parentCallback={callbackFilter} />
+        </Grid>
+
+        <Grid key={2} item xs={10}>
+          <Paper className={classes.paper} >
+            <Grid
+              container
+              direction="row"
+              justify="flex-end"
+              alignItems="center">
+
+              <Selects parentCallback={callbackSelect} />
             </Grid>
 
-            <Grid key={2} item xs={10}>
-              <Paper className={classes.paper} >
-                <Grid
-                  container
-                  direction="row"
-                  justify="flex-end"
-                  alignItems="center">
-                  
-                <Selects parentCallback={callbackSelect}/>
-                </Grid>
+            <ImgMediaCard offset={offset} selectedSortItem={selectedSortItem}
 
-                <ImgMediaCard offset={offset} selectedSortItem={selectedSortItem}
-                
-                checkedFilterItems={checkedFilterItems} searchTxt={searchTxt}
-                />
+              checkedFilterItems={checkedFilterItems} searchTxt={searchTxt}
+            />
 
-              </Paper>
+          </Paper>
 
-              <Paper className={classes.paper} style={{display:'flex',justifyContent: 'center'}}>
-                <FlatPagination parentCallback={callback}/>
-              
-              </Paper>
-            </Grid>
+          <Paper className={classes.paper} style={{ display: 'flex', justifyContent: 'center' }}>
+            <FlatPagination parentCallback={callback} />
 
-          </Grid>
-       
+          </Paper>
+        </Grid>
 
-          <Grid container className={classes.root} justify="center" spacing={2}>
-
-          
-
-          <Grid key={1} item xs={2}>
-              <div></div>
-            </Grid>
-
-            <Grid key={2} item xs={10}>
-              <Paper className={classes.paper} >
-                 
+      </Grid>
 
 
-                
+      <Grid container className={classes.root} justify="center" spacing={2}>
+
+
+
+        <Grid key={1} item xs={2}>
+          <div></div>
+        </Grid>
+
+        <Grid key={2} item xs={10}>
+          <Paper className={classes.paper} >
+
+
+
+
             <Box p={1} bgcolor="background.paper">
-                <Typography color="primary"  variant="subtitle2" component="h2">
-                    Recently Viewed Items
+              <Typography color="primary" variant="subtitle2" component="h2">
+                Recently Viewed Items
                 </Typography>
             </Box>
 
 
 
-          <CarouselList />
+            <CarouselList />
 
 
-              </Paper>
-            </Grid>
-          </Grid>
-      
+          </Paper>
+        </Grid>
+      </Grid>
+
 
 
 
