@@ -1,0 +1,333 @@
+{
+
+  
+  
+
+    "man":[
+        {
+            "id":1,
+            "img": "http://localhost:3000/ck-shirt20.jpg",
+            "title": "Men's Navy Polo Ralph Lauren Crew Neck Short Sleeve T-Shirt XXL",
+            "author": "Sohel",
+            "price": "100.00",
+            "shipping":"free",
+            "brand":"RL",
+            "size":"L",
+            "material":"Cotton",
+            "type":"regular"
+          },
+          {
+            "id":2,
+            "img": "http://localhost:3000/camera.jpg",
+            "title": "Men's White Polo Ralph Lauren Crew Neck Short Sleeve T-Shirt XXL",
+            "author": "Nipa",
+            "price":"200.00",
+            "shipping":"free",
+            "brand":"NIKE",
+            "size":"XS",
+            "material":"Cotton",
+            "type":"regular"
+
+
+            
+          },
+          {
+            "id":3,
+            "img": "http://localhost:3000/hats.jpg",
+            "title": "Ralph Lauren Polo Men's multi original",
+            "author": "Mortoza",
+            "price":"250.00",
+            "shipping":"free",
+            "brand":"NIKE",
+            "size":"XXL",
+            "material":"Cotton",
+            "type":"regular"
+
+
+          },
+          {
+            "id":4,
+            "img": "http://localhost:3000/honey.jpg",
+            "title": "Ralph Lauren Polo Men's original polo",
+            "author": "Isa",
+            "price":"222.00",
+            "shipping":"10.00",
+            "brand":"NIKE",
+            "size":"XXXL",
+            "material":"Cotton",
+            "type":"regular"
+
+
+          },
+          {
+            "id":5,
+            "img": "http://localhost:3000/morning.jpg",
+            "title": "Ralph Lauren Polo Men's original polo",
+            "author": "zakaria",
+            "price":"323.00",
+            "shipping":"free",
+            "brand":"UA",
+            "size":"S",
+            "material":"Silk",
+            "type":"regular"
+
+          },
+          {
+            "id":6,
+            "img": "http://localhost:3000/shirt1.jpg",
+            "title": "Ralph Lauren Polo Men's original polo",
+            "author": "zakaria",
+            "price":"212.00",
+            "shipping":"free",
+            "brand":"UA",
+            "size":"L",
+            "material":"Lilen",
+            "type":"regular"
+
+
+          },
+          {
+            "id":7,
+            "img": "http://localhost:3000/shirt2.jpg",
+            "title": "Ralph Lauren Polo Men's original polo",
+            "author": "zakaria",
+            "price":"211.00",
+            "shipping":"free",
+            "brand":"UA",
+            "size":"M",
+            "material":"Lilen",
+            "type":"regular"
+
+
+          },
+
+
+
+
+
+
+          {
+            "id":8,
+            "img": "http://localhost:3000/ck-shirt1.jpg",
+            "title": "Men's Navy Polo Ralph Lauren Crew Neck Short Sleeve T-Shirt XXL",
+            "author": "Sohel",
+            "price": "100.00",
+            "shipping":"free",
+            "brand":"RL",
+            "size":"S",
+            "material":"Cotton",
+            "type":"regular"
+
+          },
+          {
+            "id":9,
+            "img": "http://localhost:3000/ck-shirt2.jpg",
+            "title": "Men's White Polo Ralph Lauren Crew Neck Short Sleeve T-Shirt XXL",
+            "author": "Nipa",
+            "price":"200.00",
+            "shipping":"free",
+            "brand":"NIKE",
+            "size":"XL",
+            "material":"Polyester",
+            "type":"regular"
+
+
+            
+          },
+          {
+            "id":10,
+            "img": "http://localhost:3000/ck-shirt3.jpg",
+            "title": "Ralph Lauren Polo Men's multi original",
+            "author": "Mortoza",
+            "price":"250.00",
+            "shipping":"free",
+            "brand":"NIKE",
+            "size":"L",
+            "material":"Polyester",
+            "type":"regular"
+
+
+
+          },
+          {
+            "id":11,
+            "img": "http://localhost:3000/ck-shirt4.jpg",
+            "title": "Ralph Lauren Polo Men's original polo",
+            "author": "Isa",
+            "price":"222.00",
+            "shipping":"10.00",
+            "brand":"NIKE",
+            "size":"L",
+            "material":"Polyester",
+            "type":"regular"
+
+
+          },
+          {
+            "id":12,
+            "img": "http://localhost:3000/ck-shirt5.jpg",
+            "title": "Ralph Lauren Polo Men's original polo",
+            "author": "zakaria",
+            "price":"323.00",
+            "shipping":"free",
+            "brand":"UA",
+            "size":"L",
+            "material":"Polyester",
+            "type":"regular"
+
+          },
+          {
+            "id":13,
+            "img": "http://localhost:3000/ck-shirt6.jpg",
+            "title": "Ralph Lauren Polo Men's original polo",
+            "author": "zakaria",
+            "price":"212.00",
+            "shipping":"free",
+            "brand":"UA",
+            "size":"XL",
+            "material":"Polyester",
+            "type":"regular"
+
+
+          },
+          {
+            "id":14,
+            "img": "http://localhost:3000/ck-shirt7.jpg",
+            "title": "Ralph Lauren Polo Men's original polo",
+            "author": "zakaria",
+            "price":"211.00",
+            "shipping":"free",
+            "brand":"UA",
+            "size":"XXL",
+            "material":"Cotton",
+            "type":"regular"
+
+
+          },
+
+
+          {
+            "id":15,
+            "img": "http://localhost:3000/ck-shirt8.jpg",
+            "title": "Men's Navy Polo Ralph Lauren Crew Neck Short Sleeve T-Shirt XXL",
+            "author": "Sohel",
+            "price": "100.00",
+            "shipping":"free",
+            "brand":"RL",
+            "size":"L",
+            "material":"Polyester",
+            "type":"regular"
+
+          },
+          {
+            "id":16,
+            "img": "http://localhost:3000/ck-shirt9.jpg",
+            "title": "Men's White Polo Ralph Lauren Crew Neck Short Sleeve T-Shirt XXL",
+            "author": "Nipa",
+            "price":"200.00",
+            "shipping":"free",
+            "brand":"NIKE",
+            "size":"L",
+            "material":"Polyester",
+            "type":"regular"
+
+
+            
+          },
+          {
+            "id":17,
+            "img": "http://localhost:3000/ck-shirt10.jpg",
+            "title": "Ralph Lauren Polo Men's multi original",
+            "author": "Mortoza",
+            "price":"250.00",
+            "shipping":"free",
+            "brand":"NIKE",
+            "size":"M",
+            "material":"Polyester",
+            "type":"regular"
+
+
+          },
+          {
+            "id":18,
+            "img": "http://localhost:3000/ck-shirt11.jpg",
+            "title": "Ralph Lauren Polo Men's original polo",
+            "author": "Isa",
+            "price":"222.00",
+            "shipping":"10.00",
+            "brand":"NIKE",
+            "size":"M",
+            "material":"Polyester",
+            "type":"regular"
+
+
+          },
+          {
+            "id":19,
+            "img": "http://localhost:3000/ck-shirt12.jpg",
+            "title": "Ralph Lauren Polo Men's original polo",
+            "author": "zakaria",
+            "price":"323.00",
+            "shipping":"free",
+            "brand":"UA",
+            "size":"L",
+            "material":"Polyester",
+            "type":"regular"
+
+          },
+          {
+            "id":20,
+            "img": "http://localhost:3000/ck-shirt15.jpg",
+            "title": "Ralph Lauren Polo Men's original polo",
+            "author": "zakaria",
+            "price":"212.00",
+            "shipping":"free",
+            "brand":"UA",
+            "size":"L",
+            "material":"Polyester",
+            "type":"regular"
+
+
+          },
+          {
+            "id":21,
+            "img": "http://localhost:3000/ck-shirt14.jpg",
+            "title": "Ralph Lauren Polo Men's original polo",
+            "author": "zakaria",
+            "price":"211.00",
+            "shipping":"free",
+            "brand":"UA",
+            "size":"XXL",
+            "material":"Polyester",
+            "type":"regular"
+
+
+          }
+
+          
+
+          
+
+
+    ],
+
+    "woman":[
+      {
+        "id":22,
+        "img": "http://localhost:3000/white.jpg",
+        "title": "White",
+        "author": "zakaria",
+        "price":"311.00",
+        "shipping":"free",
+        "brand":"UA",
+        "size":"XL",
+        "material":"Cotton",
+        "type":"regular"
+
+
+      }
+    ]
+
+  }
+    
+
