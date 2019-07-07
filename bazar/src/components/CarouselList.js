@@ -112,7 +112,7 @@ export default function CarouselList() {
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetch(
-        'http://localhost:3001/title',
+        'http://localhost:3001/man',
       );
       const result = await data.json();
       if (result) {

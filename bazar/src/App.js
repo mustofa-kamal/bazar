@@ -147,9 +147,9 @@ const  App =()=> {
       <Layout>
         <Route  exact path="/" component={Home}/>
 
-        <Route exact path="/:type" component={()=><Clothing />}/>
+        <Route exact path="/:category" component={Clothing}/>
 
-        <Route  path="/:type/:id" component={()=><Details />}/>
+        <Route  path="/:category/:id" component={()=><Details />}/>
 
 
 

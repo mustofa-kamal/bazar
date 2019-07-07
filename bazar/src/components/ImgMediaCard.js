@@ -195,6 +195,10 @@ const ImgMediaCard = (props) => {
 
   const type = props.type;
 
+  const category = props.match.params.category;
+
+
+
 
   let urlParam='';
   if (checkedFilterItems){
@@ -224,7 +228,7 @@ const ImgMediaCard = (props) => {
   //"XS=false&S=false&M=false&L=true&XL=false&XXL=false&XXXL=false"
  
   async function fetchData() {
-    let url = "http://localhost:3001/title?_page="+page+"&_limit="+
+    let url = "http://localhost:3001/"+category+"?_page="+page+"&_limit="+
     limit+"&_sort="+selectedSortItem +""+ urlParam;
 
 
@@ -247,7 +251,7 @@ const ImgMediaCard = (props) => {
 
     items.map((item, i, props) =>
 
-    <Link to={`${item.type}/${item.id}`}>
+    <Link to={`${category}/${item.id}`}>
 
         <GalleryItem key={i} img={item.img} title={item.title} 
         price={item.price} shipping={item.shipping} brand={item.brand}

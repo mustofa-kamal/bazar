@@ -147,16 +147,18 @@ const  App =()=> {
       <Layout>
         <Route  exact path="/" component={Home}/>
 
-        <Route exact path="/man" component={()=><Clothing type="man" />}/>
+        <Route exact path="/:type" component={()=><Clothing />}/>
 
-        <Route exact path="/woman" component={()=><Clothing type="woman" />}/>
+        <Route  path="/:type/:id" component={()=><Details />}/>
+
+
 
 
         
 
-        <Route  path="/man/detail" component={Details} />
+        {/* <Route  path="/man/detail" component={Details} />
 
-        <Route  path="/woman/detail" component={Details} />
+        <Route  path="/woman/detail" component={Details} /> */}
 
 
 

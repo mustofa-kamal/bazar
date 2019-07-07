@@ -44,7 +44,7 @@ const useStyles = makeStyles(theme => ({
 
 
 
-export default function Clothing({type}) {
+export default function Clothing({match}) {
   useEffect(() => {
     document.body.style.backgroundColor = "#eeeeee";
   }, []);
@@ -112,7 +112,9 @@ export default function Clothing({type}) {
 
             <ImgMediaCard offset={offset} selectedSortItem={selectedSortItem}
 
-              checkedFilterItems={checkedFilterItems} searchTxt={searchTxt} type={type}
+              checkedFilterItems={checkedFilterItems} searchTxt={searchTxt} 
+            
+              match={match}
             />
 
           </Paper>
