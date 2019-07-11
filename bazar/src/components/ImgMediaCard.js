@@ -55,7 +55,9 @@ let pair = {
 
   Lilen : 'material',
   Polyester:'material',
-  Cotton:'material'
+  Cotton:'material',
+
+  activewear:'type'
 
 
 

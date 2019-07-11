@@ -75,6 +75,8 @@ const [state, setState] = React.useState({
     NIKE:false,
     UA:false,
 
+    activewear:false
+
 
 
 
@@ -116,7 +118,38 @@ const [state, setState] = React.useState({
     return (
       <Fragment>
 
+
+
 <FormControl component="fieldset">
+          <FormLabel component="legend">ActiveWear</FormLabel>
+        
+        <FormGroup column>
+          <FormControlLabel
+            control={
+              <Checkbox checked={state.activewear}
+               onChange={handleChange('activewear')}
+               value="activewear" />
+            }
+            label="Activewear"
+          />
+    
+          
+
+
+
+</FormGroup>
+        </FormControl>
+
+
+
+<br/><br/>
+
+
+<FormControl component="fieldset">
+
+
+
+
           <FormLabel component="legend">SIZES</FormLabel>
         
         <FormGroup column>

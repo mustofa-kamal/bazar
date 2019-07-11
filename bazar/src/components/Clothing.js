@@ -33,7 +33,9 @@ const useStyles = makeStyles(theme => ({
   },
   paper: {
     width: "100%"
-  },
+  }
+
+ 
 
 
 
@@ -46,7 +48,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function Clothing({match}) {
   useEffect(() => {
-    document.body.style.backgroundColor = "#eeeeee";
+     document.body.style.backgroundColor = "#eeeeee";
   }, []);
 
   const [offset, setOffset] = useState(0);
