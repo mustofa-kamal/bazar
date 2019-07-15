@@ -1,53 +1,62 @@
 import React, {useEffect} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
+import Paper from '@material-ui/core/Paper' ;
 import Grid from '@material-ui/core/Grid';
+import ImageMediaCard from "./ImageMediaCard"
 
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
   },
-  paper1: {
-    padding: theme.spacing(2),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-    height:"500px"
-  },
 
-  paper2: {
-    padding: theme.spacing(2),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-    height:"50px"
-  },
+  paper: {
+    width: "100%"
+  }
+
+  
 }));
 
 export default function Details() {
 
   useEffect(() => {
-    document.body.style.backgroundColor = "#ffffff";
+    document.body.style.backgroundColor = "#eeeeee";
  }, []);
 
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-      <Grid container spacing={3}>
+      <Grid container spacing={2}>
+
+
         
         <Grid item xs={5}>
-          sfsdfsfsfsf
+
+<ImageMediaCard/>
 
         </Grid>
+
         <Grid item xs={4}>
-aaaadad
+          description
+
+
 
         </Grid>
+
         <Grid item xs={3}>
-aadadda
+
+        add to bag
 
         </Grid>
+
+
+        
+        
        
-      </Grid>
-    </div>
+     </Grid>
+     <br/>
+     <br/>
+     </div>
+     
   );
 }
