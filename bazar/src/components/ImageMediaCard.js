@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
 import Card from '@material-ui/core/Card';
@@ -39,12 +39,16 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
+const ImageMediaCard = (props) => {
 
 
-export default function ImageMediaCard() {
   const classes = useStyles();
 
+  const imgSrc=props.imgSrc;
+
+
   return (
+    <Fragment>
 
     <Paper className={classes.root}>
 
@@ -67,13 +71,17 @@ export default function ImageMediaCard() {
 
 
 <SideBySideMagnifier
-  imageSrc="http://localhost:3000/ck-shirt20.jpg"
-  imageAlt="Example"
+  imageSrc={imgSrc}
  />
 
 <Typography component="p" align="center">
-          Paper can be used to build surface or other elements for your application.
+Please select an image thumpnail from the right to render big
+
         </Typography>
+
+
+
+    
 
 
 
@@ -89,8 +97,14 @@ export default function ImageMediaCard() {
 
       
 
-        
+
+
+</Fragment>
       
       
   );
+
+ 
 }
+
+export default ImageMediaCard;

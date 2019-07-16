@@ -1,8 +1,9 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper' ;
 import Grid from '@material-ui/core/Grid';
 import ImageMediaCard from "./ImageMediaCard"
+import ImageAvatars from './ImageAvatars';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -22,7 +23,19 @@ export default function Details() {
     document.body.style.backgroundColor = "#eeeeee";
  }, []);
 
+
+ 
+
   const classes = useStyles();
+
+  const [imgSrc, setImgSrc] = useState('');
+
+
+  const callbackImgSrc = (imgSrc) => {
+    setImgSrc(imgSrc);
+  }
+
+
 
   return (
     <div className={classes.root}>
@@ -32,12 +45,13 @@ export default function Details() {
         
         <Grid item xs={5}>
 
-<ImageMediaCard/>
+          <ImageMediaCard imgSrc={imgSrc} />
 
         </Grid>
 
         <Grid item xs={4}>
           description
+          <ImageAvatars parentCallback={callbackImgSrc}/>
 
 
 
