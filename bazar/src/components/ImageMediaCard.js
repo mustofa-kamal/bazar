@@ -44,7 +44,7 @@ const ImageMediaCard = (props) => {
 
   const classes = useStyles();
 
-  const imgSrc=props.imgSrc;
+  const currentSrc=props.currentSrc;
 
 
   return (
@@ -71,7 +71,7 @@ const ImageMediaCard = (props) => {
 
 
 <SideBySideMagnifier
-  imageSrc={imgSrc}
+  imageSrc={currentSrc}
  />
 
 <Typography component="p" align="center">

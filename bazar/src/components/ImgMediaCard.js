@@ -98,7 +98,7 @@ const GalleryItem = (props) => {
                   component="img"
                   alt="Contemplative Reptile"
                   height="200"
-                  image={props.img}
+                  image={props.srces[0]}
                   title="Contemplative Reptile"
                   style={{width:"150px", border:"1px solid #dddddd"}}
                 />
@@ -238,7 +238,10 @@ const ImgMediaCard = (props) => {
     let res = await fetch(url);
     res
       .json()
-      .then(res => setItems(res))
+      .then(
+        res => 
+        setItems(res)
+        )
       .catch(err => setErrors(err));
   }
 
@@ -260,11 +263,13 @@ const ImgMediaCard = (props) => {
     <Link to={{
       pathname: `${category}/${item.id}`,
       query: {
-        src: `${item.img}`
+        srces:item.srces,
+        title:item.title
+
       }}}>
     
       
-      <GalleryItem key={i} img={item.img} title={item.title} 
+      <GalleryItem key={i} srces={item.srces} title={item.title} 
     price={item.price} shipping={item.shipping} brand={item.brand}
     size={item.size}  material={item.material} /></Link>
 

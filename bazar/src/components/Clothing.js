@@ -152,8 +152,8 @@ export default function Clothing({match}) {
 
 
 
-            <CarouselList />
-
+{/*             <CarouselList />
+ */}
 
           </Paper>
         </Grid>

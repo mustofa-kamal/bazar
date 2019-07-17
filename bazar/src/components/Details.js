@@ -19,28 +19,47 @@ const useStyles = makeStyles(theme => ({
 
   const Details = (props) => {
 
+    const classes = useStyles();
+
+    const {srces} = props.location.query;
+
+
+  const {title} = props.location.query;
+
+  const [currentSrc, setCurrentSrc] = useState(srces[0]);
+
+  const [currentTitle, setCurrentTitle] = useState(title);
+
+  
+
+
+  
+  
+
+
 
 
   useEffect(() => {
     document.body.style.backgroundColor = "#eeeeee";
     
-    const {src} = props.location.query;
+   
 
-    setImgSrc(src);
-
+    let x = 1;
 
 
  }, []);
 
 
 
-  const classes = useStyles();
-
-  const [imgSrc, setImgSrc] = useState('');
+  
 
 
-  const callbackImgSrc = (imgSrc) => {
-    setImgSrc(imgSrc);
+
+  
+
+
+  const callbackcurrentImgSrc = (currentSrc) => {
+    setCurrentSrc(currentSrc);
   }
 
 
@@ -55,13 +74,13 @@ const useStyles = makeStyles(theme => ({
         
         <Grid item xs={5}>
 
-          <ImageMediaCard imgSrc={imgSrc} />
+          <ImageMediaCard currentSrc={currentSrc} />
 
         </Grid>
 
         <Grid item xs={4}>
           description
-          <ImageAvatars parentCallback={callbackImgSrc}/>
+          <ImageAvatars parentCallback={callbackcurrentImgSrc}/>
 
 
 

@@ -80,8 +80,8 @@ export default function CarouselList() {
       <RouterLink to="/repos/reactjs/react-router">
       <div className={classes.root} >
         <GridList className={classes.gridList} cols={1} style={{height:"210px", width:"150px"}}>
-          <GridListTile key={props.img}>
-            <img src={props.img} alt={props.title}  />
+          <GridListTile key={props.srces[0]}>
+            <img src={props.srces[0]} alt={props.title}  />
             <GridListTileBar
               title={props.title}
               classes={{
@@ -101,7 +101,7 @@ export default function CarouselList() {
     return (
       result.map((item, i) =>
       
-        <GalleryItem key={i} img={item.img} title={item.title} url='https://material-ui.com/components/grid-list/'/>
+        <GalleryItem key={i} srces={item.srces[0]} title={item.title} url='https://material-ui.com/components/grid-list/'/>
       )
     )
   }
