@@ -247,19 +247,28 @@ const ImgMediaCard = (props) => {
   }, [offset,selectedSortItem,urlParam])
   
 
+
+  
+
   return (
 
-   
+
+    
 
     items.map((item, i, props) =>
 
-    <Link to={`${category}/${item.id}`}>
-
-        <GalleryItem key={i} img={item.img} title={item.title} 
-        price={item.price} shipping={item.shipping} brand={item.brand}
-        size={item.size}  material={item.material} />
-    </Link>
+    <Link to={{
+      pathname: `${category}/${item.id}`,
+      query: {
+        src: `${item.img}`
+      }}}>
     
+      
+      <GalleryItem key={i} img={item.img} title={item.title} 
+    price={item.price} shipping={item.shipping} brand={item.brand}
+    size={item.size}  material={item.material} /></Link>
+
+   
 
     )
 

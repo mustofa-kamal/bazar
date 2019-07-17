@@ -15,7 +15,7 @@ import GridListTileBar from '@material-ui/core/GridListTileBar';
 import IconButton from '@material-ui/core/IconButton';
 import StarBorderIcon from '@material-ui/icons/StarBorder';
 
-import { Link as RouterLink, BrowserRouter } from "react-router-dom";
+import { Link , BrowserRouter } from "react-router-dom";
 
 
 
@@ -55,7 +55,9 @@ let pair = {
 
   Lilen : 'material',
   Polyester:'material',
-  Cotton:'material'
+  Cotton:'material',
+
+  activewear:'type'
 
 
 
@@ -195,6 +197,10 @@ const ImgMediaCard = (props) => {
 
   const type = props.type;
 
+  const category = props.match.params.category;
+
+
+
 
   let urlParam='';
   if (checkedFilterItems){
@@ -224,7 +230,7 @@ const ImgMediaCard = (props) => {
   //"XS=false&S=false&M=false&L=true&XL=false&XXL=false&XXXL=false"
  
   async function fetchData() {
-    let url = "http://localhost:3001/title?_page="+page+"&_limit="+
+    let url = "http://localhost:3001/"+category+"?_page="+page+"&_limit="+
     limit+"&_sort="+selectedSortItem +""+ urlParam;
 
 
@@ -244,14 +250,16 @@ const ImgMediaCard = (props) => {
   return (
 
    
+    
 
     items.map((item, i, props) =>
 
-    <RouterLink to="/props[i].type/detail">
+    <Link to={`${category}/${item.id}`}>
+
         <GalleryItem key={i} img={item.img} title={item.title} 
         price={item.price} shipping={item.shipping} brand={item.brand}
         size={item.size}  material={item.material} />
-    </RouterLink>
+    </Link>
     
 
     )

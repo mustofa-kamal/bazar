@@ -149,7 +149,10 @@ const  App =()=> {
 
         <Route exact path="/:category" component={Clothing}/>
 
-        <Route  path="/:category/:id" component={()=><Details />}/>
+        <Route  path="/:category/:id" component={Details}/>
+
+
+
 
 
 

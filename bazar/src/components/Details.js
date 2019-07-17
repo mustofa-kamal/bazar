@@ -17,14 +17,22 @@ const useStyles = makeStyles(theme => ({
   
 }));
 
-export default function Details() {
+  const Details = (props) => {
+
+
 
   useEffect(() => {
     document.body.style.backgroundColor = "#eeeeee";
+    
+    const {src} = props.location.query;
+
+    setImgSrc(src);
+
+
+
  }, []);
 
 
- 
 
   const classes = useStyles();
 
@@ -34,6 +42,8 @@ export default function Details() {
   const callbackImgSrc = (imgSrc) => {
     setImgSrc(imgSrc);
   }
+
+
 
 
 
@@ -74,3 +84,6 @@ export default function Details() {
      
   );
 }
+
+
+export default Details;
