@@ -262,7 +262,7 @@ const ImgMediaCard = (props) => {
 
     <Link to={{
       pathname: `${category}/${item.id}`,
-      query: {
+      state: {
         srces:item.srces,
         title:item.title
 

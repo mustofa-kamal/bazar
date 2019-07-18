@@ -29,10 +29,14 @@ const useStyles = makeStyles({
 
 
 
+const ImageAvatars = (props) => {
 
 
-export default function ImageAvatars({parentCallback}) {
   const classes = useStyles();
+
+  const {parentCallback} = props;
+
+  const {allsrces} = props;
 
   const thumpnailClick = (e) => {
     console.log('Click');
@@ -40,18 +44,17 @@ export default function ImageAvatars({parentCallback}) {
   
   }
 
+  const items = allsrces.map((item, key) =>
+  <Avatar onClick={(e) => thumpnailClick(e)} style={{cursor: 'pointer'}} alt="Remy Sharp" className={classes.root} src={item} key={item}/>
+);
+
   return (
     <Grid container justify="center" alignItems="center">
-      <Avatar  onClick={(e) => thumpnailClick(e)} style={{cursor: 'pointer'}} alt="Remy Sharp" src="http://localhost:3000/ck-shirt10.jpg" className={classes.root} />
-      <Avatar onClick={(e) => thumpnailClick(e)} style={{cursor: 'pointer'}} alt="Remy Sharp" src="http://localhost:3000/ck-shirt11.jpg" className={classes.root} />
-      <Avatar onClick={(e) => thumpnailClick(e)} style={{cursor: 'pointer'}} alt="Remy Sharp" src="http://localhost:3000/ck-shirt12.jpg" className={classes.root} />
-      <Avatar onClick={(e) => thumpnailClick(e)} style={{cursor: 'pointer'}} alt="Remy Sharp" src="http://localhost:3000/ck-shirt20.jpg" className={classes.root} />
-      <Avatar onClick={(e) => thumpnailClick(e)} style={{cursor: 'pointer'}} alt="Remy Sharp" src="http://localhost:3000/ck-shirt20.jpg" className={classes.root} />
-      <Avatar onClick={(e) => thumpnailClick(e)} style={{cursor: 'pointer'}} alt="Remy Sharp" src="http://localhost:3000/ck-shirt20.jpg" className={classes.root} />
-      <Avatar onClick={(e) => thumpnailClick(e)} style={{cursor: 'pointer'}} alt="Remy Sharp" src="http://localhost:3000/ck-shirt20.jpg" className={classes.root} />
-      <Avatar onClick={(e) => thumpnailClick(e)} style={{cursor: 'pointer'}} alt="Remy Sharp" src="http://localhost:3000/ck-shirt20.jpg" className={classes.root} />
-      <Avatar onClick={(e) => thumpnailClick(e)} style={{cursor: 'pointer'}} alt="Remy Sharp" src="http://localhost:3000/ck-shirt20.jpg" className={classes.root} />
-
+      {items}
     </Grid>
+
+
   );
 }
+
+export default ImageAvatars;

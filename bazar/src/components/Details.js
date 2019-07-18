@@ -21,14 +21,17 @@ const useStyles = makeStyles(theme => ({
 
     const classes = useStyles();
 
-    const {srces} = props.location.query;
+    const {srces} = props.location.state;
 
 
-  const {title} = props.location.query;
+    const {title} = props.location.state;
 
-  const [currentSrc, setCurrentSrc] = useState(srces[0]);
+    const [currentSrc, setCurrentSrc] = useState(srces[0]);
 
-  const [currentTitle, setCurrentTitle] = useState(title);
+    const [currentTitle, setCurrentTitle] = useState(title);
+
+    const [allsrces, setAllsrces]= useState(srces);
+
 
   
 
@@ -44,7 +47,6 @@ const useStyles = makeStyles(theme => ({
     
    
 
-    let x = 1;
 
 
  }, []);
@@ -80,7 +82,7 @@ const useStyles = makeStyles(theme => ({
 
         <Grid item xs={4}>
           description
-          <ImageAvatars parentCallback={callbackcurrentImgSrc}/>
+          <ImageAvatars parentCallback={callbackcurrentImgSrc} allsrces={allsrces}/>
 
 
 
