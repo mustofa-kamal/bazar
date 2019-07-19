@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
 import Grid from '@material-ui/core/Grid';
@@ -20,8 +20,9 @@ const useStyles = makeStyles({
     margin:3
 
    
-  }
+  },
 
+ 
   
 });
 
@@ -34,6 +35,8 @@ const ImageAvatars = (props) => {
 
   const classes = useStyles();
 
+
+
   const {parentCallback} = props;
 
   const {allsrces} = props;
@@ -41,11 +44,26 @@ const ImageAvatars = (props) => {
   const thumpnailClick = (e) => {
     console.log('Click');
     parentCallback(e.target.src);
+
+    const listItems = e.target.parentNode.parentNode.children;
+    const listArray = Array.from(listItems);
+    listArray.forEach((item) => {
+
+          item.style.border='1px solid gray'
+
+    }
+      
+      );
+
+
+
+    e.target.parentNode.style.border='1px solid red'
+
   
   }
 
   const items = allsrces.map((item, key) =>
-  <Avatar onClick={(e) => thumpnailClick(e)} style={{cursor: 'pointer'}} alt="Remy Sharp" className={classes.root} src={item} key={item}/>
+  <Avatar  onClick={(e) => thumpnailClick(e)} style={{cursor: 'pointer'}}  className={classes.root} src={item.src} key={item}/>
 );
 
   return (

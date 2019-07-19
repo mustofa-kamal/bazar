@@ -98,13 +98,13 @@ const GalleryItem = (props) => {
                   component="img"
                   alt="Contemplative Reptile"
                   height="200"
-                  image={props.srces[0]}
+                  image={props.srces[0].src}
                   title="Contemplative Reptile"
                   style={{width:"150px", border:"1px solid #dddddd"}}
                 />
                 <CardContent style={{width:"70%"}}>
                   <Typography gutterBottom variant="subtitle1" component="h2" style={{fontSize:"1.4rem"}}>
-                      {props.title}
+                      {props.srces[0].title}
                   </Typography>
 
 
@@ -130,7 +130,6 @@ const GalleryItem = (props) => {
 
                       <li>Material: 100% {props.material}</li>
 
-                      <li>Size: {props.size}</li>
 
                     </ul>
 

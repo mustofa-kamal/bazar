@@ -26,7 +26,7 @@ const useStyles = makeStyles(theme => ({
 
     const {title} = props.location.state;
 
-    const [currentSrc, setCurrentSrc] = useState(srces[0]);
+    const [currentSrc, setCurrentSrc] = useState(srces[0].src);
 
     const [currentTitle, setCurrentTitle] = useState(title);
 
